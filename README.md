@@ -11,7 +11,6 @@
 <ul class="technologies">
   <li class="technologies" hover="Python">Node.js</li>
   <li class="technologies" hover="Python">Next.js</li>
-  <li class="technologies" hover="Python">Redis</li>
 </ul>
 <h3 class="usage">How to use</h3>
 <p class="usage">In progress.</p>
