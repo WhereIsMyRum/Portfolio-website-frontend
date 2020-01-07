@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
                     </h3>
                 </div>
                 <p>{props.data.description}</p>
-                <a href="#projects" onClick={() => {props.setDetailID(props.data.name); props.setCardStyle(theme)}} className={`more`}>more<FontAwesomeIcon icon={faArrowRight}/></a>
+                <div data-link="projects" onClick={() => {props.setDetailID(props.data.name); props.setCardStyle(theme)}} className={`${classes.navLink} more`}>more<FontAwesomeIcon icon={faArrowRight}/></div>
             </div>
         </div>
     );

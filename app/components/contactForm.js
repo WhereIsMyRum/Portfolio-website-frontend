@@ -23,6 +23,7 @@ const ContactForm = props => {
 
     const handleSubmit = async event => {
         event.preventDefault();
+        setSubmitted(true);
         try {
             const res = await fetch('http://backend.docker/api/contact', {
                 method: 'POST',
@@ -32,10 +33,12 @@ const ContactForm = props => {
                 },
                 body: JSON.stringify(getPayload())
             })
-            res.status === 200 ? (setSuccess(true), setFailed(false)) : setFailed(true)
+            console.log(res.status)
+            res.status === 200 ? (setSuccess(true), setFailed(false), setSubmitted(false)) : (setFailed(true), setSubmitted(false));
             resetAll();
         } catch(error)  {
             console.log(error);
+            resetAll();
             setFailed(true);
         }
     }
@@ -63,9 +66,9 @@ const ContactForm = props => {
     return (
         <div className={classes.formWrapper}>
             { success && !failed && <div className={classes.message}>Thank you for sending a message!</div> }
-            { failed && <div className={`${classes.message} ${classes.error}`}>Something went wrong. Please try again.</div> }
-            { submitted && !failed && !success && <Loader/> }
-            { !success &&
+            { failed && <div className={`${classes.message} ${classes.error}`}>Something went wrong. Please try again later.</div> }
+            { submitted && !failed && !success && <div className={classes.message}><Loader/></div>}
+            { !success && !submitted &&
             <form onSubmit={ handleSubmit } >
                 <input placeholder="Name" name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
                 <input placeholder="Email" name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
@@ -73,10 +76,10 @@ const ContactForm = props => {
                 <textarea placeholder="Message" name="messageaighjk" required rows="10" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
                 <input type="submit" value="Submit" className={`${classes.generalInput} ${classes.submit}`}/>
 
-                <input placeholder="Name" name="name" {...honeyBindName} className={`${classes.honey}`}></input>
-                <input placeholder="Email" name="email" {...honeyBindEmail} className={`${classes.honey}`}></input>
-                <input placeholder="Subject" name="subject"  {...honeyBindSubject} className={`${classes.honey}`}></input>
-                <textarea placeholder="Message" name="message"  rows="1" cols="10" {...honeyBindText} className={`${classes.honey}`}></textarea>
+                <input placeholder="Name" name="name" {...honeyBindName} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
+                <input placeholder="Email" name="email" {...honeyBindEmail} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
+                <input placeholder="Subject" name="subject"  {...honeyBindSubject} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
+                <textarea placeholder="Message" name="message"  rows="1" cols="10" {...honeyBindText} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></textarea>
             </form>}
         </div>
     )

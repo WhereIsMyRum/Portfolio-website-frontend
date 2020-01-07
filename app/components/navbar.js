@@ -8,7 +8,7 @@ const Navbar = () => {
     const classes = navbarStyles();
     return (
         <div>
-            <nav className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1`}>
+            <nav className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1`} id="navbar">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -16,16 +16,16 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className={`nav-item`}>
-                            <a className={`${classes.navLink} nav-link`} href="#home">Home</a>
+                            <span className={`${classes.navLink} nav-link`} data-link="home">Home</span>
                         </li>
                         <li className={`nav-item`}>
-                            <a className={`${classes.navLink} nav-link`} href="#about">About</a>
+                            <span className={`${classes.navLink} nav-link`} data-link="about">About</span>
                         </li>
                         <li className={` nav-item`}>
-                            <a className={`${classes.navLink} nav-link`} href="#projects">Projects</a>
+                            <span className={`${classes.navLink} nav-link`} data-link="projects">Projects</span>
                         </li>
                         <li className={`nav-item`}>
-                            <a className={`${classes.navLink} nav-link`} href="#contact">Contact</a>
+                            <span className={`${classes.navLink} nav-link`} data-link="contact">Contact</span>
                         </li>
                     </ul>
                 </div>

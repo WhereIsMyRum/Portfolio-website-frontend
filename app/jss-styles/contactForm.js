@@ -73,11 +73,17 @@ const contactFormStyles = createUseStyles({
         }
     },
     message: {
+        margin: {
+            top: '100px'
+        },
         width: '100%',
         textAlign: 'center'
     },
     error: {
-        color: 'red'
+        color: '#BD2030',
+        margin: {
+            bottom: '20px'
+        }
     },
     honey: {
         visibility: 'hidden'

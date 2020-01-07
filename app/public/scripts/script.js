@@ -1,10 +1,23 @@
 window.onload = () => {
+    const navbar = document.getElementById('navbar');
+    new Waypoint({
+        element: document.getElementById('about'),
+        handler: (direction) => {rightToZero(navbar, direction)},
+        offset: 40
+    });
+
+    setupScrolling();
+    const moreLinks = document.getElementsByClassName("more");
+    setInterval(() => {
+        setupScrolling(moreLinks);
+    }, 500);
+
     const loader = document.getElementById('loader');
     fadeOut(loader);
 }
 
 const fadeOut = (elem) => {
-    const fade = setInterval(function () {
+    const fade = setInterval(() => {
         if (!elem.style.opacity) {
             elem.style.opacity = 1;
         }
@@ -15,4 +28,28 @@ const fadeOut = (elem) => {
             clearInterval(fade);
         }
     }, 40);
+}
+
+const rightToZero = (elem, direction) => {
+    if (direction === "down") {
+        elem.style.right=0
+    }
+    if (direction === "up") {
+        elem.style.right="-100%"
+    }
+}
+
+const setupScrolling = (elems) => {
+    let links = elems;
+    if(!links) {
+        links = document.getElementsByClassName("nav-link");
+    }
+
+    for (let link of links) {
+        link.addEventListener("click", () => {
+            document.getElementById(link.getAttribute('data-link')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+    }
 }

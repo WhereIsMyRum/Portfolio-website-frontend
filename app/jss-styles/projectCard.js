@@ -73,6 +73,10 @@ const projectsCardStyles = createUseStyles({
         }
     },
 
+    navLink: {
+        display: 'inline-block'
+    },
+
     content: {
         display: 'flex',
         flexDirection: 'column',
