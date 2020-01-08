@@ -18,7 +18,7 @@ const DetailedProjectView = (props) => {
 
     useEffect( () => {
         async function fetchData() {
-            const result = await axios(`http://backend.docker/api/projects/${props.id}`);
+            const result = await axios(`api/projects/${props.id}`);
             setTitle({
                 'title': result.data.title.title,
                 'link': result.data.title.url

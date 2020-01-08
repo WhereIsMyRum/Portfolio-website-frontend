@@ -1,4 +1,4 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
 import { relative } from 'path';
 
@@ -6,7 +6,7 @@ const homeStyles = createUseStyles({
     wrapper: {
         width: '100vw',
         height: '100vh',
-        background : {
+        background: {
             image: 'url("/images/bg_full.jpg")',
             color: '#000',
             position: 'center 0',
@@ -25,7 +25,7 @@ const homeStyles = createUseStyles({
         height: '100vh',
         position: 'absolute',
         zIndex: 2,
-        background : {
+        background: {
             image: 'url("/images/bg_bt_trans.png")',
             position: 'center 0',
             repeat: 'no-repeat',
@@ -78,7 +78,7 @@ const homeStyles = createUseStyles({
     },
 
     logo2: {
-        zIndex:11,
+        zIndex: 11,
         opacity: 0,
         height: '80px',
         width: '80px',
@@ -88,17 +88,23 @@ const homeStyles = createUseStyles({
         }
     },
 
-    '@media (max-width: 1024px)' : {
-        logo : {
+    '@media (max-width: 1024px)': {
+        logo: {
             top: '65px',
             left: '20px'
         }
     },
 
-    '@media (max-width: 640px)' : {
+    '@media (max-width: 640px)': {
         logo: {
             width: '60px',
             height: '60px'
+        }
+    },
+
+    '@media (min-width: 2000px)': {
+        introduction: {
+            fontSize: '2.7rem'
         }
     }
 });

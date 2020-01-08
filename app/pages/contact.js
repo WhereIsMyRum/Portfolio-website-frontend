@@ -11,7 +11,7 @@ const Contact = () => {
         <div className={globalClasses.sectionHeader}>
             <h2>Contact</h2>
         </div>
-        <div className={classes.contactForm}>
+        <div className={`${classes.contactForm} ${globalClasses.contentWrapper}`}>
             <ContactForm />
         </div>
         <CopyrightFooter />

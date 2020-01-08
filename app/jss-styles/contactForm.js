@@ -7,7 +7,7 @@ const contactFormStyles = createUseStyles({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        maxWidth: '500px',
+        maxWidth: '640px',
         margin: {
             left: 'auto',
             right: 'auto',

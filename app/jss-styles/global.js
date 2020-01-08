@@ -21,6 +21,13 @@ const globalStyles = createUseStyles({
         }
     },
 
+    contentWrapper: {
+        minHeight: '60vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+    },
+
     '@media (max-width: 320px)': {
         sectionHeader: {
             padding: {

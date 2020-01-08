@@ -9,7 +9,7 @@ const projectsStyles = createUseStyles({
         backgroundColor:'#eeeeee',
         zIndex:20,
         position: 'relative'
-    }
+    },
 });
 
 export default projectsStyles;

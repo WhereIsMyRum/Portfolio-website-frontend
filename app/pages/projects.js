@@ -10,7 +10,9 @@ const Projects = (props) => {
                 <div className={globalClasses.sectionHeader}>
                     <h2>Projects</h2>
                 </div>
-                <ProjectsDisplay props={props.props}/>
+                <div className={globalClasses.contentWrapper}>
+                    <ProjectsDisplay props={props.props}/>
+                </div>
             </div>
         )
 };

@@ -1,10 +1,13 @@
 window.onload = () => {
     const navbar = document.getElementById('navbar');
-    new Waypoint({
-        element: document.getElementById('about'),
-        handler: (direction) => {rightToZero(navbar, direction)},
-        offset: 40
-    });
+    if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 770) {
+        new Waypoint({
+            element: document.getElementById('home'),
+            handler: (direction) => {rightToZero(navbar, direction)},
+            offset: -70
+        });
+    }
+    
 
     setupScrolling();
     const moreLinks = document.getElementsByClassName("more");

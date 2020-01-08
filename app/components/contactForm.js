@@ -25,7 +25,7 @@ const ContactForm = props => {
         event.preventDefault();
         setSubmitted(true);
         try {
-            const res = await fetch('http://backend.docker/api/contact', {
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                 'Accept': 'application/json, text/plain, */*',
@@ -73,7 +73,7 @@ const ContactForm = props => {
                 <input placeholder="Name" name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
                 <input placeholder="Email" name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
                 <input placeholder="Subject" name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>
-                <textarea placeholder="Message" name="messageaighjk" required rows="10" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
+                <textarea placeholder="Message" name="messageaighjk" required rows="12" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
                 <input type="submit" value="Submit" className={`${classes.generalInput} ${classes.submit}`}/>
 
                 <input placeholder="Name" name="name" {...honeyBindName} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>

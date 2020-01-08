@@ -48,10 +48,6 @@ const navbarStyles = createUseStyles({
     },
 
     '@media (max-width: 1024px)': {
-        navbar: {
-            right:'0%'
-        },
-
         socialMedia: {
             width: '200px',
             height: '36px',
@@ -59,6 +55,18 @@ const navbarStyles = createUseStyles({
                 height: '35px',
                 width: '35px'
             }
+        },
+    },
+
+    '@media (max-width: 770px)': {
+        navbar: {
+            right:'0%'
+        },
+    },
+
+    '@media (min-width: 1024px)': {
+        navLink: {
+            fontSize: '1rem !important'
         }
     }
 });

@@ -1,4 +1,4 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
 
 
@@ -189,10 +189,11 @@ const detailedProjectViewStyles = createUseStyles({
             left: '10px',
             top: '10px',
             right: '5px',
-            bottom:'5px'
+            bottom: '10px'
         },
         '& p': {
-            maxWidth: '300px'
+            maxWidth: '400px',
+            marginLeft: '15px'
         }
     },
     technologiesContainer: {
@@ -227,6 +228,20 @@ const detailedProjectViewStyles = createUseStyles({
             }
         }
     },
+    '@media (max-width: 1610px)': {
+        section: {
+            '& p': {
+                maxWidth: '435px'
+            }
+        }
+    },
+    '@media (max-width: 1240px)': {
+        section: {
+            '& p': {
+                maxWidth: '600px'
+            }
+        }
+    },
     '@media (max-width: 770px)': {
         projectContainer: {
             padding: {
@@ -243,6 +258,23 @@ const detailedProjectViewStyles = createUseStyles({
                 right: '30px',
                 bottom: '50px',
                 top: '20px'
+            }
+        }
+    },
+
+    '@media (min-width: 2000px)': {
+        title: {
+            '& h4': {
+                fontSize: '1.65rem'
+            }
+        },
+        section: {
+            '& h5': {
+                fontSize: '1.4rem'
+            },
+            '& p': {
+                maxWidth: '540px',
+                fontSize: '1.1rem'
             }
         }
     }

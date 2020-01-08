@@ -14,10 +14,18 @@ const aboutStyles = createUseStyles({
 
     fullPageCenter: {
         width: '100vw',
-        height: 'auto',
         margin: {
             left:0,
             right:0
+        }
+    },
+
+    nameTextWrapper: {
+        margin: {
+            top: 0,
+            left: 'auto',
+            bottom: 0,
+            right: 'auto',
         }
     },
 
@@ -35,6 +43,15 @@ const aboutStyles = createUseStyles({
     '@media (max-width: 770px)': {
         myPhoto: {
             width: '190px',
+        }
+    },
+
+    '@media (min-width: 2000px)': {
+        about: {
+            fontSize: '1.2rem'
+        },
+        myPhoto: {
+            width: '320px'
         }
     }
 });

@@ -195,6 +195,24 @@ const projectsCardStyles = createUseStyles({
             color: 'purple'
         }
     },
+    '@media (max-width: 640px)': {
+        cardGeneral: {
+            '& h3': {
+                fontSize: '0.9rem'
+            }
+        }
+    },
+    '@media (min-width: 200px)': {
+        cardGeneral: {
+            '& h3': {
+                fontSize: '1.5rem'
+            },
+            '& p': {
+                fontSize: '1.2rem !important',
+                maxWidth: '520px'
+            }
+        }
+    }
 });
 
 const getRandomCardClass = () => {
