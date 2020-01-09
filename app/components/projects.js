@@ -11,7 +11,7 @@ const Projects = (props) => {
                     <h2>Projects</h2>
                 </div>
                 <div className={globalClasses.contentWrapper}>
-                    <ProjectsDisplay props={props.props}/>
+                    <ProjectsDisplay data={props.props}/>
                 </div>
             </div>
         )

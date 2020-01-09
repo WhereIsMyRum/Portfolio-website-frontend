@@ -1,9 +1,10 @@
 import Layout from '../components/layout';
-import Home from './home';
-import About from './about';
-import Projects from './projects';
-import Contact from './contact';
+import Home from '../components/home';
+import About from '../components/about';
+import Projects from '../components/projects';
+import Contact from '../components/contact';
 import fetch from 'isomorphic-unfetch';
+import { useState } from 'react';
 
 const Index = (props) => {
     return (
@@ -12,7 +13,7 @@ const Index = (props) => {
             <About></About>
             <Projects props={props.data}></Projects>
             <Contact></Contact>
-            <script src="/scripts/script.js"></script>
+            <script src="/static/scripts/script.js"></script>
         </Layout>
     );
 };
@@ -20,7 +21,6 @@ const Index = (props) => {
 Index.getInitialProps = async () => {
     const res = await fetch('http://backend:8080/api/projects')
     let data = await res.json();
-
     return {
         'data': data
     };

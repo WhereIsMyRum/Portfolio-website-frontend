@@ -10,8 +10,8 @@ const Home = () => {
                 <div className={classes.parallaxImg}>
                     <div className={classes.breakFix}></div>
                 </div>
-                <img className={`${classes.logo} logo`} src="/images/Logo.png" alt="My logo - Fehu rune in a hexagon"></img>
-                <img className={`${classes.logo2} ${classes.logo} logo`} src="/images/Logo_light.png" alt="My logo in light version"></img>
+                <img className={`${classes.logo} logo`} src="/static/images/Logo.png" alt="My logo - Fehu rune in a hexagon"></img>
+                <img className={`${classes.logo2} ${classes.logo} logo`} src="/static/images/Logo_light.png" alt="My logo in light version"></img>
                 <div className={classes.introduction}>
                     <div className={classes.jumbotron}>
                         <p className={classes.introTxt}>Hello.</p> <span className={classes.introTxt}>My name is&nbsp;

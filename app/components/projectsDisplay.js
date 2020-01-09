@@ -16,7 +16,7 @@ const ProjectsDisplay = (props) => {
         
         return (
             <div className={classes.projectsContainer}>
-                {props.props.map( repo => {
+                {props.data.map( repo => {
                     return <ProjectCard key={repo.id} data={repo} setDetailID={setDetailID} setCardStyle={setCardStyle}/>
                 })}
             </div>
