@@ -1,13 +1,18 @@
 import { projectsCardStyles, getRandomCardClass } from '../jss-styles/projectCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react';
 
 
 const ProjectCard = (props) => {
     const classes = projectsCardStyles();
-    const theme = getRandomCardClass();
+    const [ style, setStyle ] = useState('card1');
+
+    useEffect(() => {
+        setStyle(getRandomCardClass());
+    }) 
     return (
-        <div className={`${classes.cardGeneral} ${classes[theme]} ${theme}`}>
+        <div className={`${classes.cardGeneral} ${classes[style]} ${style}`}>
             <span></span>
             <div className={`${classes.content}`}>
                 <div>
@@ -16,7 +21,7 @@ const ProjectCard = (props) => {
                     </h3>
                 </div>
                 <p>{props.data.description}</p>
-                <div data-link="projects" onClick={() => {props.setDetailID(props.data.name); props.setCardStyle(theme)}} className={`${classes.navLink} more`}>more<FontAwesomeIcon icon={faArrowRight}/></div>
+                <div data-link="projects" onClick={() => {props.setDetailID(props.data.name); props.setCardStyle(style)}} className={`${classes.navLink} more`}>more<FontAwesomeIcon icon={faArrowRight}/></div>
             </div>
         </div>
     );

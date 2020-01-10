@@ -220,22 +220,12 @@ const getRandomCardClass = () => {
     switch (c) {
         case 0:
             return 'card1';
-            break;
         case 1:
             return 'card2';
-            break;
         case 2:
             return 'card3';
-            break;
-        case 3:
-            return 'card4';
-            break;
-        case 4:
-            return 'card5';
-            break;
         default:
             return 'card1';
-            break;
     }
 };
 
