@@ -1,4 +1,4 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
 
 
@@ -33,7 +33,7 @@ const contactFormStyles = createUseStyles({
         margin: {
             left: '15px',
             right: '15px',
-            top:'1px'
+            top: '1px'
         }
     },
     subject: {
@@ -41,7 +41,7 @@ const contactFormStyles = createUseStyles({
         margin: {
             left: '15px',
             right: '15px',
-            top:'1px',
+            top: '1px',
             bottom: '1px'
         }
     },
@@ -50,7 +50,7 @@ const contactFormStyles = createUseStyles({
         margin: {
             left: '15px',
             right: '1px',
-            bottom:'1px'
+            bottom: '1px'
         }
     },
     email: {
@@ -58,7 +58,7 @@ const contactFormStyles = createUseStyles({
         margin: {
             left: '1px',
             right: '15px',
-            bottom:'1px'
+            bottom: '1px'
         }
     },
     submit: {
@@ -102,7 +102,7 @@ const contactFormStyles = createUseStyles({
             margin: {
                 left: '15px',
                 right: '15px',
-                top:'1px',
+                top: '1px',
                 bottom: '1px'
             }
         }

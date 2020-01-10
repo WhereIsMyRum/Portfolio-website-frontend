@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import colors from './colors';
-import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
+
 
 const rnd = () => Math.floor(Math.random() * (+31 - +23)) + +23;
 const projectsCardStyles = createUseStyles({

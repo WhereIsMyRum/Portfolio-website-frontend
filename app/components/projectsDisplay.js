@@ -1,7 +1,9 @@
 import { useState } from 'react';
+
 import projectsDisplayStyles from '../jss-styles/projectsDisplay';
 import ProjectCard from '../components/projectCard';
 import DetailedProjectView from '../components/detailedProjectView';
+
 
 const ProjectsDisplay = (props) => {
     const [ detailID, setDetailID ] = useState('');
@@ -12,8 +14,6 @@ const ProjectsDisplay = (props) => {
             <DetailedProjectView id={detailID} style={cardStyle} setDetailID={setDetailID} setCardStyle={setCardStyle}/>
         )
     } else {
-        // move projetsContainer into separate component
-        
         return (
             <div className={classes.projectsContainer}>
                 {props.data.map( repo => {

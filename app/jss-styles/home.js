@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import colors from './colors';
-import { relative } from 'path';
+
 
 const homeStyles = createUseStyles({
     wrapper: {

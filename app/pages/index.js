@@ -4,7 +4,7 @@ import About from '../components/about';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
 import fetch from 'isomorphic-unfetch';
-import { useState } from 'react';
+
 
 const Index = (props) => {
     return (
@@ -26,4 +26,4 @@ Index.getInitialProps = async () => {
     };
 };
 
-    export default Index;
+export default Index;

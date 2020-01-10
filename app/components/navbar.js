@@ -1,7 +1,9 @@
-import Link from 'next/link';
-import navbarStyles from '../jss-styles/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import navbarStyles from '../jss-styles/navbar';
+
+import content from '../config/content.json';
 
 
 const Navbar = () => {
@@ -16,25 +18,25 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className={`nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-link="home">Home</span>
+                            <span className={`${classes.navLink} nav-link`} data-link="home">{content.navbar.section1}</span>
                         </li>
                         <li className={`nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-link="about">About</span>
+                            <span className={`${classes.navLink} nav-link`} data-link="about">{content.navbar.section2}</span>
                         </li>
                         <li className={` nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-link="projects">Projects</span>
+                            <span className={`${classes.navLink} nav-link`} data-link="projects">{content.navbar.section3}</span>
                         </li>
                         <li className={`nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-link="contact">Contact</span>
+                            <span className={`${classes.navLink} nav-link`} data-link="contact">{content.navbar.section4}</span>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div className={classes.socialMedia}>
-                <a href="https://github.com/WhereIsMyRum" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
-                <a href="https://twitter.com/whereismywhisky" target="_blank"><FontAwesomeIcon icon={faTwitter}/></a>
-                <a href="https://www.linkedin.com/in/piotr-polcik/" target="_blank"><FontAwesomeIcon icon={faLinkedin}/></a>
-                <a href="https://www.facebook.com/PiotrPolcik" target="_blank"><FontAwesomeIcon icon={faFacebook}/></a>
+                <a href={content.social.github} target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href={content.social.twitter} target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href={content.social.linkedin} target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a href={content.social.facebook} target="_blank"><FontAwesomeIcon icon={faFacebook} /></a>
             </div>
         </div>
     )

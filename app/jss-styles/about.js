@@ -1,6 +1,5 @@
-import {createUseStyles} from 'react-jss';
-import colors from './colors';
-import { relative } from 'path';
+import { createUseStyles } from 'react-jss';
+
 
 const aboutStyles = createUseStyles({
     about: {
@@ -15,8 +14,8 @@ const aboutStyles = createUseStyles({
     fullPageCenter: {
         width: '100vw',
         margin: {
-            left:0,
-            right:0
+            left: 0,
+            right: 0
         }
     },
 
@@ -31,7 +30,7 @@ const aboutStyles = createUseStyles({
 
     myPhoto: {
         boxShadow: '0 0 15px 1px rgba(0,0,0,1)',
-        margin : {
+        margin: {
             left: 'auto',
             right: 'auto'
         },

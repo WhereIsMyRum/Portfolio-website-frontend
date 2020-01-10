@@ -1,12 +1,13 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
+
 
 const navbarStyles = createUseStyles({
     navbar: {
         visibility: 'visible',
         position: 'fixed',
         width: '100vw',
-        zIndex:100,
+        zIndex: 100,
         right: '-100%',
         backgroundColor: "#0a0a0a",
         opacity: "0.8",
@@ -15,7 +16,7 @@ const navbarStyles = createUseStyles({
 
     navLink: {
         transition: '.3s ease-out',
-        color:  `${colors.mint} !important`,
+        color: `${colors.mint} !important`,
         '&:hover': {
             cursor: 'pointer',
             color: `${colors.lightMint} !important`
@@ -60,7 +61,7 @@ const navbarStyles = createUseStyles({
 
     '@media (max-width: 770px)': {
         navbar: {
-            right:'0%'
+            right: '0%'
         },
     },
 

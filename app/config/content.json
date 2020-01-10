@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "Piotr Połcik | Develop the web and have fun!",
+        "description": "My name is Piotr, and I am a Web developer. Visit my website!"
+    },
+    "home": {
+        "title": "",
+        "intro": {
+            "greeting": "Hello",
+            "introduction": "My name is",
+            "nameVisible": "Piotr",
+            "nameHidden": "Połcik",
+            "welcome": "welcome to my developer portfolio."
+        }
+    },
+    "about": {
+        "title": "About",
+        "text": {
+            "paragraph1": "I'm Piotr, Master of Computer Science student at Technical University of Denmark and AGH University of Science and Technology in Cracow graduate, where I got my BSc of Engineering diploma.",
+            "paragraph2": "My main focus is Backend developement, with some interest in DevOps, CI/CD and cloud services administration.",
+            "paragraph3": "I'm open to all cooperation proposals, as I love to learn by doing."
+        }
+    },
+    "projects": {
+        "title": "Projects"
+    },
+    "contact": {
+        "title": "Contact"
+    },
+    "contactForm": {
+        "errorMessage": "Something went wrong. Please try again later.",
+        "thankYouMessage": "Thank you for sending a message!"
+    },
+    "navbar": {
+        "section1": "Home",
+        "section2": "About",
+        "section3": "Projects",
+        "section4": "Contact"
+    },
+    "social": {
+        "github": "https://github.com/WhereIsMyRum",
+        "twitter": "https://twitter.com/whereismywhisky",
+        "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
+        "facebook": "https://www.facebook.com/PiotrPolcik"
+    },
+    "copyright": {
+        "text": "Piotr Połcik",
+        "date": "January 2019",
+        "place": "Copenhagen,"
+    },
+    "projectCard": {
+        "detailsButton": "more"
+    },
+    "projectDetails": {
+        "backButton": "Back",
+        "githubButton": "Go to Github"
+    }
+}

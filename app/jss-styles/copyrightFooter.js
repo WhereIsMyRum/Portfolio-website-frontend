@@ -1,5 +1,6 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
+
 
 const copyrightFooterStyles = createUseStyles({
     footer: {
@@ -15,7 +16,6 @@ const copyrightFooterStyles = createUseStyles({
             left: 'auto',
             right: 'auto'
         },
-        width: '150px',
         '& p': {
             margin: {
                 left: 'auto',

@@ -1,5 +1,6 @@
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import colors from './colors';
+
 
 const globalStyles = createUseStyles({
     sectionHeader: {
@@ -11,7 +12,7 @@ const globalStyles = createUseStyles({
             color: colors.mint,
             marginBottom: '65px',
         },
-        
+
     },
 
     paragraphStyling: {

@@ -3,11 +3,11 @@ window.onload = () => {
     if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 770) {
         new Waypoint({
             element: document.getElementById('home'),
-            handler: (direction) => {rightToZero(navbar, direction)},
+            handler: (direction) => { rightToZero(navbar, direction) },
             offset: -70
         });
     }
-    
+
 
     setupScrolling();
     const moreLinks = document.getElementsByClassName("more");
@@ -35,16 +35,16 @@ const fadeOut = (elem) => {
 
 const rightToZero = (elem, direction) => {
     if (direction === "down") {
-        elem.style.right=0
+        elem.style.right = 0
     }
     if (direction === "up") {
-        elem.style.right="-100%"
+        elem.style.right = "-100%"
     }
 }
 
 const setupScrolling = (elems) => {
     let links = elems;
-    if(!links) {
+    if (!links) {
         links = document.getElementsByClassName("nav-link");
     }
 
