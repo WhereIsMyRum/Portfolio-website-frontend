@@ -11,11 +11,12 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: false
       - run:
           name:  Setup Environmental Variables
           command: |
             echo 'export IMAGE_NAME=portfolio-website' >> $BASH_ENV
-            echo $IMAGE_NAME
 
       - run:
           name: Update npm
@@ -39,7 +40,7 @@ jobs:
           context: PORTOFLIO_CONTEXT
           command: |
             echo 'export IMAGE_NAME=portfolio-website' >> $BASH_ENV
-            docker build -t whereismyrum/$IMAGE_NAME:latest
+            docker build -t whereismyrum/$IMAGE_NAME:latest .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --pasword-stdin
             doceker  push whereismyrum/$IMAGE_NAME:latest
 
