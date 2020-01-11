@@ -64,8 +64,10 @@ const DetailedProjectView = (props) => {
                         {sections.map(section => {
                             return (
                                 <div key={section.title} className={`${classes.section} ${classes.innerContainer} ${props.style}`}>
-                                    <h5>{section.title}</h5>
-                                    <div>{renderHTML(section.content)}</div>
+                                    <div>
+                                        <h5>{section.title}</h5>
+                                        <div>{renderHTML(section.content)}</div>
+                                    </div>
                                 </div>
                             )
                         })}

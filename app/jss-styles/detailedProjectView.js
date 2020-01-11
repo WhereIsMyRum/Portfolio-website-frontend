@@ -203,6 +203,7 @@ const detailedProjectViewStyles = createUseStyles({
         flexGrow: 1,
         flexShrink: 1,
         flexDirection: 'column',
+        alignItems: "center",
         padding: {
             left: '10px',
             top: '10px',
@@ -211,7 +212,8 @@ const detailedProjectViewStyles = createUseStyles({
         },
         '& div': {
             maxWidth: '400px',
-            marginLeft: '15px'
+            marginLeft: '15px',
+            marginBottom: '10px'
         },
         '& h6': {
             color: 'inherit'
