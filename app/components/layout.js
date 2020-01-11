@@ -17,7 +17,8 @@ const Layout = (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="theme-color" content="#ffffff"></meta>
                 <meta name="description" content={content.meta.description}></meta>
-                <link rel="stylesheet" href="http://bootswatch.com/4/lux/bootstrap.min.css"></link>
+                <meta property="og:image" content="https://piotrpolcik.pl/static/images/me_bw.jpg" />
+                <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"></link>
                 <link rel="stylesheet" href="/static/styles/styles.css"></link>
                 <link rel="shortcut icon" type="image/png" href="/static/images/Logo_light.png" />
                 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossOrigin="anonymous"></script>
