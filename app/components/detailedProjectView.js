@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import renderHTML from 'react-render-html';
 
 import detailedProjectViewStyles from '../jss-styles/detailedProjectView';
 import Loader from '../components/loader';
@@ -27,6 +28,7 @@ const DetailedProjectView = (props) => {
                 'title': result.data.title.title,
                 'link': result.data.title.url
             })
+            console.log(result.data.sections)
             setSections(result.data.sections);
             setTechnologies(result.data.technologies);
             setIsLoading(false);
@@ -50,7 +52,7 @@ const DetailedProjectView = (props) => {
                         <div className={`${classes.technologiesContainer} ${classes.innerContainer} ${props.style}`}>
                             {technologies.map(item => {
                                 return (
-                                    <span key={item.content} title={item.hover} className={classes.technology}>
+                                    <span key={item.content} title={item.hover} className={`${classes.technology} technology-item`}>
                                         <FontAwesomeIcon icon={faCheckCircle} />
                                         {item.content}
                                     </span>
@@ -63,7 +65,7 @@ const DetailedProjectView = (props) => {
                             return (
                                 <div key={section.title} className={`${classes.section} ${classes.innerContainer} ${props.style}`}>
                                     <h5>{section.title}</h5>
-                                    <p>{section.content}</p>
+                                    <div>{renderHTML(section.content)}</div>
                                 </div>
                             )
                         })}

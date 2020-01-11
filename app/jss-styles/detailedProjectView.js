@@ -37,10 +37,16 @@ const detailedProjectViewStyles = createUseStyles({
             '& h5': {
                 color: `${colors.mint}`
             },
-            '& p': {
+            '& div': {
                 color: '#777777'
             },
-            '& span': {
+            '& a': {
+                color: `${colors.mint}`,
+                '&:hover': {
+                    color: `${colors.lightMint}`
+                }
+            },
+            '& .technology-item': {
                 color: `${colors.mint}`,
                 borderColor: `${colors.mint}`,
                 '&:hover': {
@@ -76,10 +82,16 @@ const detailedProjectViewStyles = createUseStyles({
             '& h5': {
                 color: '#fff'
             },
-            '& p': {
+            '& div': {
                 color: '#999999'
             },
-            '& span': {
+            '& a': {
+                color: `${colors.lightMint}`,
+                '&:hover': {
+                    color: '#fff'
+                }
+            },
+            '& .technology-item': {
                 color: '#fff',
                 borderColor: '#fff',
                 '&:hover': {
@@ -116,10 +128,16 @@ const detailedProjectViewStyles = createUseStyles({
             '& h5': {
                 color: 'rgba(0,0,0,1)'
             },
-            '& p': {
+            '& div': {
                 color: '#444444'
             },
-            '& span': {
+            '& a': {
+                color: `${colors.mint}`,
+                '&:hover': {
+                    color: `${colors.lightMint}`
+                }
+            },
+            '& .technology-item': {
                 color: 'rgba(0,0,0,1)',
                 border: 'solid 1px rgba(0,0,0,0.2)',
                 '&:hover': {
@@ -191,9 +209,18 @@ const detailedProjectViewStyles = createUseStyles({
             right: '5px',
             bottom: '10px'
         },
-        '& p': {
+        '& div': {
             maxWidth: '400px',
             marginLeft: '15px'
+        },
+        '& h6': {
+            color: 'inherit'
+        },
+        '& ul': {
+            marginLeft: '35px'
+        },
+        '& a': {
+            transition: '.2s linear'
         }
     },
     technologiesContainer: {
@@ -230,14 +257,14 @@ const detailedProjectViewStyles = createUseStyles({
     },
     '@media (max-width: 1610px)': {
         section: {
-            '& p': {
+            '& div': {
                 maxWidth: '435px'
             }
         }
     },
     '@media (max-width: 1240px)': {
         section: {
-            '& p': {
+            '& div': {
                 maxWidth: '600px'
             }
         }
@@ -272,7 +299,7 @@ const detailedProjectViewStyles = createUseStyles({
             '& h5': {
                 fontSize: '1.4rem'
             },
-            '& p': {
+            '& div': {
                 maxWidth: '540px',
                 fontSize: '1.1rem'
             }
