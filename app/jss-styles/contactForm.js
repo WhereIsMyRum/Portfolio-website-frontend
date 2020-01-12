@@ -86,6 +86,8 @@ const contactFormStyles = createUseStyles({
         }
     },
     honey: {
+        width: '3px',
+        height: '3px',
         visibility: 'hidden'
     },
     '@media (max-width: 480px)': {

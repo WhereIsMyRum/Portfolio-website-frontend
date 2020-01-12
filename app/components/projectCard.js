@@ -24,7 +24,7 @@ const ProjectCard = (props) => {
                     </h3>
                 </div>
                 <p>{props.data.description}</p>
-                <div data-link="projects" onClick={() => {
+                <div data-link="projects" data-history="push" onClick={() => {
                         props.setDetailID(props.data.name); 
                         props.setCardStyle(style)
                     }} 

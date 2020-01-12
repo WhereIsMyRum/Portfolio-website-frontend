@@ -28,7 +28,6 @@ const DetailedProjectView = (props) => {
                 'title': result.data.title.title,
                 'link': result.data.title.url
             })
-            console.log(result.data.sections)
             setSections(result.data.sections);
             setTechnologies(result.data.technologies);
             setIsLoading(false);
@@ -41,7 +40,7 @@ const DetailedProjectView = (props) => {
             {isLoading && <Loader />}
             {!isLoading && sections.length > 0 && technologies.length > 0 &&
                 <div className={`${props.style}-wrapper`}>
-                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button`}><FontAwesomeIcon icon={faArrowLeft} />{content.projectDetails.backButton}</div>
+                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`} data-history="pop"><FontAwesomeIcon icon={faArrowLeft} />{content.projectDetails.backButton}</div>
                     <div className={`${classes.title} ${classes.innerContainer} ${props.style}`}>
                         <h4>{title.title}</h4>
                         <div className={`${classes.link} button`}>

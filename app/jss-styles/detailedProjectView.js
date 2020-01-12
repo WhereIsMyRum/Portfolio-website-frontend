@@ -212,8 +212,12 @@ const detailedProjectViewStyles = createUseStyles({
         },
         '& div': {
             maxWidth: '400px',
-            marginLeft: '15px',
-            marginBottom: '10px'
+            margin: {
+                left: '15px',
+                right:'10px',
+                bottom: '10px',
+                top: '3px'
+            }
         },
         '& h6': {
             color: 'inherit'
@@ -281,6 +285,20 @@ const detailedProjectViewStyles = createUseStyles({
         }
     },
     '@media (max-width: 640px)': {
+        title: {
+            '& h4': {
+                fontSize: '1.1rem'
+            }
+            
+        },
+        section: {
+            '& h5': {
+                fontSize: '0.8rem'
+            },
+            '& div': {
+                fontSize: '0.750rem'
+            }
+        },
         projectContainer: {
             padding: {
                 left: '30px',

@@ -199,10 +199,13 @@ const projectsCardStyles = createUseStyles({
         cardGeneral: {
             '& h3': {
                 fontSize: '0.9rem'
+            },
+            '& p': {
+                fontSize: '0.750rem'
             }
         }
     },
-    '@media (min-width: 200px)': {
+    '@media (min-width: 2000px)': {
         cardGeneral: {
             '& h3': {
                 fontSize: '1.5rem'
