@@ -26,8 +26,7 @@ const Contact = () => {
         </div>
         <div className={classes.contactList}>
             {
-            content.contactTiles.tiles.map( tile => {
-                console.log(tile)
+                content.contactTiles.tiles.map( tile => {
                     return <ContactTile key={tile.title} {...tile} />
             })}
         </div>

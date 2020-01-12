@@ -44,12 +44,17 @@ const rightToZero = (elem, direction) => {
 
 const setupScrolling = (elems) => {
     let links = elems;
+    let setNavbarClosing = false
+    let navbarToggler;
     if (!links) {
+        navbarToggler = document.getElementsByClassName("navbar-toggler")[0];
         links = document.getElementsByClassName("nav-link");
+        setNavbarClosing = true;
     }
 
     for (let link of links) {
         link.addEventListener("click", () => {
+            if (setNavbarClosing) navbarToggler.click();
             document.getElementById(link.getAttribute('data-link')).scrollIntoView({
                 behavior: 'smooth'
             });
