@@ -8,7 +8,6 @@ window.onload = () => {
         });
     }
 
-
     setupScrolling();
     const moreLinks = document.getElementsByClassName("more");
     setInterval(() => {
@@ -49,7 +48,9 @@ const setupScrolling = (elems) => {
     if (!links) {
         navbarToggler = document.getElementsByClassName("navbar-toggler")[0];
         links = document.getElementsByClassName("nav-link");
-        setNavbarClosing = true;
+        if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 770) {
+            setNavbarClosing = true;
+        }
     }
 
     for (let link of links) {
