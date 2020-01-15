@@ -158,7 +158,8 @@ const detailedProjectViewStyles = createUseStyles({
         '&:hover': {
             cursor: 'pointer'
         },
-        width: '65px',
+        width: '70px',
+        textAlign: 'center',
         '& svg': {
             width: '15px',
             height: '15px',

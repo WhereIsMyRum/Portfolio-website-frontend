@@ -45,7 +45,8 @@ const projectsCardStyles = createUseStyles({
             }
         },
         '& .more': {
-            width: '60px',
+            width: '70px',
+            textAlign: 'center',
             alignSelf: 'flex-end',
             color: 'transparent',
             margin: {
