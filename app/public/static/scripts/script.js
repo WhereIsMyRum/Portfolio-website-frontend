@@ -56,9 +56,12 @@ const setupScrolling = (elems) => {
     for (let link of links) {
         link.addEventListener("click", () => {
             if (setNavbarClosing) navbarToggler.click();
-            document.getElementById(link.getAttribute('data-link')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetedElement = document.getElementById(link.getAttribute('data-link'))
+            if (targetedElement) {
+                targetedElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         })
     }
 }

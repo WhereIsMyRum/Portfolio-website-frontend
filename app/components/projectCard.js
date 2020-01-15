@@ -4,16 +4,14 @@ import { useState, useEffect } from 'react';
 
 import { projectsCardStyles, getRandomCardClass } from '../jss-styles/projectCard'
 
-import content from '../config/content.json';
-
 
 const ProjectCard = (props) => {
     const classes = projectsCardStyles();
-    const [ style, setStyle ] = useState('card1');
+    const [style, setStyle] = useState('card1');
 
     useEffect(() => {
         setStyle(getRandomCardClass());
-    }) 
+    })
     return (
         <div className={`${classes.cardGeneral} ${classes[style]} ${style}`}>
             <span></span>
@@ -25,10 +23,10 @@ const ProjectCard = (props) => {
                 </div>
                 <p>{props.data.description}</p>
                 <div data-link="projects" data-history="push" onClick={() => {
-                        props.setDetailID(props.data.name); 
-                        props.setCardStyle(style)
-                    }} 
-                    className={`${classes.navLink} more`}>{content.projectCard.detailsButton}<FontAwesomeIcon icon={faArrowRight}/></div>
+                    props.setDetailID(props.data.name);
+                    props.setCardStyle(style)
+                }}
+                    className={`${classes.navLink} more`}>{props.content.detailsButton}<FontAwesomeIcon icon={faArrowRight} /></div>
             </div>
         </div>
     );

@@ -4,25 +4,32 @@ import About from '../components/about';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
 import fetch from 'isomorphic-unfetch';
+import nextCookies from 'next-cookies';
 
 
 const Index = (props) => {
+    const content = require(`../config/content-${props.lang}.json`);
+
     return (
-        <Layout>
-            <Home></Home>
-            <About></About>
-            <Projects props={props.data}></Projects>
-            <Contact></Contact>
+        <Layout content={content.layout}>
+            <Home content={content.home}></Home>
+            <About content={content.about}></About>
+            <Projects content={content.projects} props={props.data}></Projects>
+            <Contact content={content.contact}></Contact>
             <script src="/static/scripts/script.js"></script>
         </Layout>
     );
 };
 
-Index.getInitialProps = async () => {
+Index.getInitialProps = async (ctx) => {
     const res = await fetch('http://backend:8080/api/projects')
-    let data = await res.json();
+    const data = await res.json();
+    const { lang } = nextCookies(ctx);
+
+
     return {
-        'data': data
+        'data': data,
+        'lang': lang ? lang : "en"
     };
 };
 

@@ -17,6 +17,19 @@ a {
     text-decoration: none;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
 a:hover {
     text-decoration: none;
 }

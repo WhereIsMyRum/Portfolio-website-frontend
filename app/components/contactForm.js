@@ -5,10 +5,9 @@ import Loader from './loader';
 import useInput from '../hooks/input-hook'
 import contactFormStyles from '../jss-styles/contactForm';
 
-import content from '../config/content.json';
 
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const { value: name, bind: bindName, reset: resetName } = useInput('');
     const { value: email, bind: bindEmail, reset: resetEmail } = useInput('');
     const { value: subject, bind: bindSubject, reset: resetSubject } = useInput('');
@@ -67,16 +66,16 @@ const ContactForm = () => {
 
     return (
         <div className={classes.formWrapper}>
-            {success && !failed && <div className={classes.message}>{content.contactForm.thankYouMessage}</div>}
-            {failed && <div className={`${classes.message} ${classes.error}`}>{content.contactForm.errorMessage}</div>}
+            {success && !failed && <div className={classes.message}>{props.content.thankYouMessage}</div>}
+            {failed && <div className={`${classes.message} ${classes.error}`}>{props.content.errorMessage}</div>}
             {submitted && !failed && !success && <div className={classes.message}><Loader /></div>}
             {!success && !submitted &&
                 <form onSubmit={handleSubmit} >
-                    <input placeholder="Name" name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
-                    <input placeholder="Email" name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
-                    <input placeholder="Subject" name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>
-                    <textarea placeholder="Message" name="messageaighjk" required rows="12" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
-                    <input type="submit" value="Submit" className={`${classes.generalInput} ${classes.submit}`} />
+                    <input placeholder={props.content.namePlaceholder} name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
+                    <input placeholder={props.content.emailPlaceholder} name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
+                    <input placeholder={props.content.subjectPlaceholder} name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>
+                    <textarea placeholder={props.content.textPlaceholder} name="messageaighjk" required rows="12" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
+                    <input type="submit" value={props.content.submitButton} className={`${classes.generalInput} ${classes.submit}`} />
 
                     <input placeholder="Name" name="name" {...honeyBindName} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
                     <input placeholder="Email" name="email" {...honeyBindEmail} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>

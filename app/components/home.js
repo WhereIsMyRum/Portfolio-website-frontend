@@ -1,8 +1,7 @@
 import homeStyles from '../jss-styles/home';
 
-import content from '../config/content.json';
 
-const Home = () => {
+const Home = (props) => {
     const classes = homeStyles();
     return (<div id="home">
         <div className={classes.wrapper}>
@@ -13,9 +12,9 @@ const Home = () => {
             <img className={`${classes.logo2} ${classes.logo} logo`} src="/static/images/Logo_light.png" alt="My logo in light version"></img>
             <div className={classes.introduction}>
                 <div className={classes.jumbotron}>
-                    <p className={classes.introTxt}>{content.home.intro.greeting}</p> <span className={classes.introTxt}>{content.home.intro.introduction}&nbsp;
-                        <h1 style={{ display: 'inline', textTransform: 'none' }} className={classes.standingOutTxt}>{content.home.intro.nameVisible}<span style={{ display: 'none' }}>{content.home.intro.nameHidden}</span></h1></span><span className={classes.introTxt}>,</span>
-                    <p className={classes.introTxt}>{content.home.intro.welcome}</p>
+                    <p className={classes.introTxt}>{props.content.intro.greeting}</p> <span className={classes.introTxt}>{props.content.intro.introduction}&nbsp;
+                        <h1 style={{ display: 'inline', textTransform: 'none' }} className={classes.standingOutTxt}>{props.content.intro.nameVisible}<span style={{ display: 'none' }}>{props.content.intro.nameHidden}</span></h1></span><span className={classes.introTxt}>,</span>
+                    <p className={classes.introTxt}>{props.content.intro.welcome}</p>
                 </div>
             </div>
         </div>

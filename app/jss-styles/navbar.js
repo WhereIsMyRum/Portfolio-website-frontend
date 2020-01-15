@@ -32,7 +32,7 @@ const navbarStyles = createUseStyles({
         height: '45px',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: 100,
+        zIndex: 99,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -46,6 +46,10 @@ const navbarStyles = createUseStyles({
                 transform: 'rotateY(180deg)'
             }
         }
+    },
+
+    langSelect: {
+        marginLeft: '40px',
     },
 
     '@media (max-width: 1024px)': {
@@ -63,6 +67,10 @@ const navbarStyles = createUseStyles({
         navbar: {
             right: '0%'
         },
+        langSelect: {
+            marginLeft: '0',
+            marginTop: '15px'
+        }
     },
 
     '@media (min-width: 1024px)': {

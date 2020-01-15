@@ -14,7 +14,7 @@ const ContactTile = (props) => {
         <div className={classes.contactTile} onClick={eval(props.onClickAction)}>
             <div className={classes.contactTileHeader}>
                 <h5 className={classes.text}>{props.title}</h5>
-                <FontAwesomeIcon icon={icons[props.icon]}/>
+                <FontAwesomeIcon icon={icons[props.icon]} />
             </div>
             <p>{props.text}</p>
         </div>

@@ -27,14 +27,14 @@ const contactTileStyles = createUseStyles({
         }
     },
     contactTileHeader: {
-        display:'flex',
+        display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: '12px'
     },
     text: {
-            color: `${colors.mint} !important`,
-            display: 'inline-block',
+        color: `${colors.mint} !important`,
+        display: 'inline-block',
         marginRight: '10px',
         marginBottom: '0'
     }

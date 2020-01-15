@@ -7,8 +7,6 @@ import renderHTML from 'react-render-html';
 import detailedProjectViewStyles from '../jss-styles/detailedProjectView';
 import Loader from '../components/loader';
 
-import content from '../config/content.json';
-
 
 const DetailedProjectView = (props) => {
     const [title, setTitle] = useState({
@@ -34,17 +32,18 @@ const DetailedProjectView = (props) => {
         }
         fetchData();
     }, [])
+    console.log(props);
 
     return (
         <div className={classes.projectContainer}>
             {isLoading && <Loader />}
             {!isLoading && sections.length > 0 && technologies.length > 0 &&
                 <div className={`${props.style}-wrapper`}>
-                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`} data-history="pop"><FontAwesomeIcon icon={faArrowLeft} />{content.projectDetails.backButton}</div>
+                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`} data-history="pop"><FontAwesomeIcon icon={faArrowLeft} />{props.content.backButton}</div>
                     <div className={`${classes.title} ${classes.innerContainer} ${props.style}`}>
                         <h4>{title.title}</h4>
                         <div className={`${classes.link} button`}>
-                            <a href={title.link} target="_blank">{content.projectDetails.githubButton}</a>
+                            <a href={title.link} target="_blank">{props.content.githubButton}</a>
                         </div>
                     </div>
                     <div>

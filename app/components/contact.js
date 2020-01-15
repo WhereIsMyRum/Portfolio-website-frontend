@@ -5,32 +5,29 @@ import CopyrightFooter from '../components/copyrightFooter';
 import ContactForm from '../components/contactForm';
 import ContactTile from '../components/contactTile';
 
-import content from '../config/content.json';
-
-import dynamic from 'next/dynamic';
 
 
-const Contact = () => {
+const Contact = (props) => {
     const globalClasses = globalStyles();
     const classes = contactStyles();
 
     return (<div id="contact" className={`${classes.contact}`}>
         <div className={globalClasses.sectionHeader}>
-            <h2>{content.contact.title}</h2>
+            <h2>{props.content.title}</h2>
         </div>
         <div className={`${classes.contactForm} ${globalClasses.contentWrapper}`}>
-            <ContactForm />
+            <ContactForm content={props.content.contactForm} />
         </div>
         <div className={classes.orDivider}>
-            <p>or if you prefer</p>
+            <p>{props.content.sectionDividerText}</p>
         </div>
         <div className={classes.contactList}>
             {
-                content.contactTiles.tiles.map( tile => {
+                props.content.contactTiles.tiles.map(tile => {
                     return <ContactTile key={tile.title} {...tile} />
-            })}
+                })}
         </div>
-        <CopyrightFooter />
+        <CopyrightFooter content={props.content.copyright} />
     </div>)
 };
 

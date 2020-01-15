@@ -4,19 +4,15 @@ import Head from 'next/head';
 import Navbar from './navbar';
 import Loader from './loader'
 
-import content from '../config/content.json';
-
-
 const Layout = (props) => {
-
     return (
         <JssProvider id={{ minify: true }}>
             <Head>
-                <title>{content.meta.title}</title>
+                <title>{props.content.meta.title}</title>
                 <meta charSet="utf-8"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="theme-color" content="#ffffff"></meta>
-                <meta name="description" content={content.meta.description}></meta>
+                <meta name="description" content={props.content.meta.description}></meta>
                 <meta property="og:image" content="https://piotrpolcik.pl/static/images/me_bw.jpg" />
                 <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"></link>
                 <link rel="stylesheet" href="/static/styles/styles.css"></link>
@@ -29,7 +25,7 @@ const Layout = (props) => {
             <div id="loader">
                 <Loader />
             </div>
-            <Navbar />
+            <Navbar social={props.content.social} content={props.content.navbar} />
             <div className="container px-0 mx-0">
                 {props.children}
             </div>

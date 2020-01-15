@@ -8,9 +8,9 @@ const globalStyles = createUseStyles({
             top: '85px',
             left: '85px'
         },
+        marginBottom: '65px',
         '& h2': {
             color: colors.mint,
-            marginBottom: '65px',
         },
 
     },
