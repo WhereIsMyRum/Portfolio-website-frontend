@@ -15,21 +15,19 @@ window.onload = () => {
     }, 500);
 
     const loader = document.getElementById('loader');
-    fadeOut(loader);
+    requestAnimationFrame(() => fadeOut(loader));
 }
 
 const fadeOut = (elem) => {
-    const fade = setInterval(() => {
-        if (!elem.style.opacity) {
-            elem.style.opacity = 1;
-        }
-        if (elem.style.opacity > 0) {
-            elem.style.opacity -= 0.1;
-        } else {
-            elem.style.display = "none";
-            clearInterval(fade);
-        }
-    }, 40);
+    if (!elem.style.opacity) {
+        elem.style.opacity = 1;
+    }
+    if (elem.style.opacity > 0) {
+        elem.style.opacity -= 0.1;
+        requestAnimationFrame(() => fadeOut(elem));
+    } else {
+        elem.style.display = "none";
+    }
 }
 
 const rightToZero = (elem, direction) => {
