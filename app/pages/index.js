@@ -22,14 +22,16 @@ const Index = (props) => {
 };
 
 Index.getInitialProps = async (ctx) => {
-    const res = await fetch('http://backend:8080/api/projects')
+    let { lang } = nextCookies(ctx);
+    lang = lang ? lang : "en";
+
+    const res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
     const data = await res.json();
-    const { lang } = nextCookies(ctx);
 
 
     return {
         'data': data,
-        'lang': lang ? lang : "en"
+        'lang': lang
     };
 };
 

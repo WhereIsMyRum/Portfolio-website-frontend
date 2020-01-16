@@ -26,7 +26,8 @@
             },
             "projectDetails": {
                 "backButton": "Back",
-                "githubButton": "Go to Github"
+                "githubButton": "Go to Github",
+                "error":"Something wait wrong. Sorry."
             }
         }
     },

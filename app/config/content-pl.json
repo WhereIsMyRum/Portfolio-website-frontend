@@ -14,19 +14,20 @@
         "text": {
             "paragraph1": "Jestem Piotr, student Informatyki drugiego stopnia na Duńskim Uniwersytecie Technicznym, absolwent Akademii Górniczo-Hutniczej w Krakowie.",
             "paragraph2": "Do moich głównych profesjonalnych zainteresowań należą Backend developement, DevOps, CI/CD oraz administracja w usługach chmurowych.",
-            "paragraph3": "Jestem otwarty na wszelkie propozycje współpracy, ponieważ z dośwaidczenia wiem, że najlepiej uczę się poprzez praktykę."
+            "paragraph3": "Jestem otwarty na wszelkie propozycje współpracy, ponieważ z doświadczenia wiem, że najlepiej uczę się poprzez praktykę."
         }
     },
     "projects": {
         "title": "Projekty",
-        "subtitle": "Wkrótce po  polsku",
+        "subtitle": "Wkrótce w pełni po polsku",
         "projectsDisplay": {
             "projectCard": {
                 "detailsButton": "więcej"
             },
             "projectDetails": {
                 "backButton": "Wróć",
-                "githubButton": "Github"
+                "githubButton": "Github",
+                "error": "Przepraszam, coś poszło nie tak."
             }
         }
     },

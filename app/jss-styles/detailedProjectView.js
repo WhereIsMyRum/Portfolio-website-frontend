@@ -262,6 +262,20 @@ const detailedProjectViewStyles = createUseStyles({
             }
         }
     },
+    errorMessage: {
+        margin: {
+            left: 'auto',
+            right: 'auto',
+            top: 0,
+            bottom: 0
+        }
+    },
+    errorBackButton: {
+        backgroundColor: "#0a0a0a",
+        color: `${colors.mint}`,
+        marginLeft: 'auto',
+        marginRight: 'auto'
+    },
     '@media (max-width: 1610px)': {
         section: {
             '& div': {
