@@ -14,8 +14,8 @@ const Navbar = (props) => {
         const animateVh = ((dir, elem) => {
             if (dir === "open") {
                 if (parseInt(elem.style.height, 10) < window.innerHeight * 1.2) {
-                    const incr = String(parseInt(elem.style.height, 10) + window.innerHeight / 20);
-                    elem.style.height = incr > window.innerHeight * 1.2 ? window.innerHeight * 1.2 + "px" : incr + "px";
+                    const incr = String(parseInt(elem.style.height, 10) + window.innerHeight / 20); 
+                    elem.style.height = incr > window.innerHeight * 1.2 ? window.innerHeight * 1.2 + 1 + "px" : incr + "px";
                     requestAnimationFrame(() => animateVh(dir, elem));
                 }
                 if (parseInt(elem.style.height, 10) > window.innerHeight * 0.8) {
@@ -25,7 +25,7 @@ const Navbar = (props) => {
                 }
             } else {
                 if (parseInt(elem.style.height, 10) > 0) {
-                    const subst = String(parseInt(elem.style.height, 10) - window.innerHeight / 15);
+                    const subst = String(parseInt(elem.style.height, 10) - window.innerHeight / 13);
                     elem.style.height = subst < 0 ? "0" + "px" : subst + "px";
                     requestAnimationFrame(() => animateVh(dir, elem));
                 } else {
