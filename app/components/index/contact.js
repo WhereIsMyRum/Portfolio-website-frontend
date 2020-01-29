@@ -1,15 +1,21 @@
-import globalStyles from '../jss-styles/global';
-import contactStyles from '../jss-styles/contact'
+import { useEffect } from 'react';
 
-import CopyrightFooter from '../components/copyrightFooter';
-import ContactForm from '../components/contactForm';
-import ContactTile from '../components/contactTile';
+import ContactForm from './contactForm';
+import ContactTile from './contactTile';
+import { fadeOutElement } from  '../../utils/utils';
+import globalStyles from '../../jss-styles/index/global';
+import contactStyles from '../../jss-styles/index/contact'
 
 
 
 const Contact = (props) => {
     const globalClasses = globalStyles();
     const classes = contactStyles();
+
+    useEffect(() => {
+        const loader = document.getElementById('loader');
+        fadeOutElement(loader);
+    }, []);
 
     return (<div id="contact" className={`${classes.contact}`}>
         <div className={globalClasses.sectionHeader}>
@@ -27,7 +33,6 @@ const Contact = (props) => {
                     return <ContactTile key={tile.title} {...tile} />
                 })}
         </div>
-        <CopyrightFooter content={props.content.copyright} />
     </div>)
 };
 

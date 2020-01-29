@@ -1,12 +1,15 @@
 import { JssProvider } from 'react-jss';
 import Head from 'next/head';
 
-import Navbar from './navbar';
-import Loader from './loader'
+import Navbar from './index/navbar';
+import Loader from './index/loader'
 
 const Layout = (props) => {
     return (
         <JssProvider id={{ minify: true }}>
+            <div id="loader">
+                <Loader />
+            </div>
             <Head>
                 <title>{props.content.meta.title}</title>
                 <meta charSet="utf-8"></meta>
@@ -22,9 +25,6 @@ const Layout = (props) => {
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" />
             </Head>
-            <div id="loader">
-                <Loader />
-            </div>
             <Navbar social={props.content.social} content={props.content.navbar} />
             <div className="container px-0 mx-0">
                 {props.children}

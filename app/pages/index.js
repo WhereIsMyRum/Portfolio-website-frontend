@@ -1,22 +1,26 @@
 import Layout from '../components/layout';
-import Home from '../components/home';
-import About from '../components/about';
-import Projects from '../components/projects';
-import Contact from '../components/contact';
+import Home from '../components/index/home';
+import About from '../components/index/about';
+import Projects from '../components/index/projects';
+import Contact from '../components/index/contact';
 import fetch from 'isomorphic-unfetch';
 import nextCookies from 'next-cookies';
+import Error from 'next/error';
+import CopyrightFooter from '../components/index/copyrightFooter';
 
 
 const Index = (props) => {
-    const content = require(`../config/content-${props.lang}.json`);
+    if (props.error) return <Error statusCode={props.error} />
 
+    const content = require(`../config/content-${props.lang}.json`);
+    console.log("here");
     return (
         <Layout content={content.layout}>
             <Home content={content.home}></Home>
             <About content={content.about}></About>
             <Projects content={content.projects} props={props.data}></Projects>
             <Contact content={content.contact}></Contact>
-            <script src="/static/scripts/script.js"></script>
+            <CopyrightFooter  />
         </Layout>
     );
 };
@@ -24,15 +28,23 @@ const Index = (props) => {
 Index.getInitialProps = async (ctx) => {
     let { lang } = nextCookies(ctx);
     lang = lang ? lang : "en";
+    let res;
+    if (process.browser) {
+        res = await fetch('http://frontend.docker/api/projects',  {headers: {cookie: `lang=${lang}`}});
+    } else {
+        res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
+    }
+    if (res.status === 200) {
+        const data = await res.json();
+        return {
+            'data': data,
+            'lang': lang
+        };
+    }
 
-    const res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
-    const data = await res.json();
+    return {'error': 500};
 
 
-    return {
-        'data': data,
-        'lang': lang
-    };
 };
 
 export default Index;

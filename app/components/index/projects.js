@@ -1,6 +1,6 @@
-import globalStyles from '../jss-styles/global';
-import projectsStyles from '../jss-styles/projects'
-import ProjectsDisplay from '../components/projectsDisplay';
+import globalStyles from '../../jss-styles/index/global';
+import projectsStyles from '../../jss-styles/index/projects'
+import ProjectsDisplay from './projectsDisplay';
 
 
 const Projects = (props) => {

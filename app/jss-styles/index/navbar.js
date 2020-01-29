@@ -8,7 +8,7 @@ const navbarStyles = createUseStyles({
         position: 'fixed',
         width: '100vw',
         zIndex: 100,
-        right: '-100%',
+        //right: '-100%',
         backgroundColor: "#0a0a0a",
         opacity: "0.8",
         transition: '0.5s ease-out',

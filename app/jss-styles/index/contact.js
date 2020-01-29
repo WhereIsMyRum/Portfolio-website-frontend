@@ -6,7 +6,7 @@ const contactStyles = createUseStyles({
     contact: {
         width: '100vw',
         height: 'auto',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 32px)',
         backgroundColor: '#151515',
         zIndex: 20,
         position: 'relative'
@@ -29,7 +29,7 @@ const contactStyles = createUseStyles({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingBottom: '90px'
+        paddingBottom: '40px'
     },
 });
 

@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import renderHTML from 'react-render-html';
 
-import detailedProjectViewStyles from '../jss-styles/detailedProjectView';
-import Loader from '../components/loader';
+import detailedProjectViewStyles from '../../jss-styles/index/detailedProjectView';
+import Loader from './loader';
 
 
 const DetailedProjectView = (props) => {
@@ -50,7 +50,7 @@ const DetailedProjectView = (props) => {
                         </div>}
             {!isLoading && !code500 &&sections.length > 0 && technologies.length > 0 &&
                 <div className={`${props.style}-wrapper`}>
-                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`} data-history="pop"><FontAwesomeIcon icon={faArrowLeft} />{props.content.backButton}</div>
+                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`}><FontAwesomeIcon icon={faArrowLeft} />{props.content.backButton}</div>
                     <div className={`${classes.title} ${classes.innerContainer} ${props.style}`}>
                         <h4>{title.title}</h4>
                         <div className={`${classes.link} button`}>
