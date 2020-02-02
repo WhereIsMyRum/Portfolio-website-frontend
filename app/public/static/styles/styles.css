@@ -10,12 +10,26 @@ html, body {
     -ms-overflow-style: none;
 }
 
+@font-face {
+    font-family: Amethyst;
+    src: url("/static/fonts/Amethyst.ttf")
+}
+
+@font-face {
+    font-family: ActionOfTheTime;
+    src: url("/static/fonts/action-of-the-time-new.ttf")
+}
+
 body::-webkit-scrollbar {
     width: 0 !important
 }
 
 a {
     text-decoration: none;
+}
+
+.fixed {
+    position: fixed;
 }
 
 select {

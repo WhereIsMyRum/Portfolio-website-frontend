@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import colors from './colors';
+import colors from '../colors';
 
 
 const homeStyles = createUseStyles({
@@ -94,6 +94,8 @@ const homeStyles = createUseStyles({
             left: '20px'
         }
     },
+
+
 
     '@media (max-width: 640px)': {
         logo: {

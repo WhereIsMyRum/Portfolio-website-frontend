@@ -1,18 +1,20 @@
 import { createUseStyles } from 'react-jss';
-import colors from './colors';
+import colors from '../colors';
 
 
 const navbarStyles = createUseStyles({
     navbar: {
         visibility: 'visible',
-        position: 'fixed',
         width: '100vw',
+        height: '47px',
         zIndex: 100,
-        //right: '-100%',
-        backgroundColor: "#0a0a0a",
+        backgroundColor: "#131313",
         opacity: "0.8",
         transition: '0.5s ease-out',
+        marginBottom: '0 !important',
+        top: '0',
     },
+
 
     navLink: {
         transition: '.3s ease-out',
@@ -49,7 +51,7 @@ const navbarStyles = createUseStyles({
     },
 
     langSelect: {
-        marginLeft: '40px',
+        marginLeft: '35px',
     },
 
     '@media (max-width: 1024px)': {

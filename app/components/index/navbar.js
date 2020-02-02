@@ -77,7 +77,7 @@ const Navbar = (props) => {
     return (
         <div>
             <LanguageSelector content={props.content.languageSelector} close={toggleLanguageSelector} content={props.content.languageSelector} />
-            <nav className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1`} id='navbar'>
+            <nav id="navbar" className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1 ${props.navbarStyling.fixed}`} id='navbar'>
                 <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                     <span className='navbar-toggler-icon'></span>
                 </button>
@@ -97,7 +97,7 @@ const Navbar = (props) => {
                             <span className={`${classes.navLink} nav-link`} data-path='/' data-link='contact'>{props.content.section4}</span>
                         </li>
                         <li className={`nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-path='/blog' >{props.content.section5}</span>
+                            <span className={`${classes.navLink} nav-link`} data-path='/blog' data-link='navbar' >{props.content.section5}</span>
                         </li>
                         <li className={`${classes.langSelect} nav-item`}>
                             <span onClick={() => toggleLanguageSelector('open')} className={`${classes.navLink} nav-link`} data-link=''>{props.content.lang}</span>
@@ -105,12 +105,14 @@ const Navbar = (props) => {
                     </ul>
                 </div>
             </nav>
-            <div className={classes.socialMedia}>
-                <a href={props.social.github} target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                <a href={props.social.twitter} target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href={props.social.linkedin} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href={props.social.facebook} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
-            </div>
+            { props.navbarStyling.socialDisplay &&
+                <div className={classes.socialMedia}>
+                    <a href={props.social.github} target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href={props.social.twitter} target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                    <a href={props.social.linkedin} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href={props.social.facebook} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+                </div>
+            }
         </div>
     )
 };

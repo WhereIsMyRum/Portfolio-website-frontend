@@ -94,5 +94,98 @@
             "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
             "facebook": "https://www.facebook.com/PiotrPolcik"
         }
+    },
+    "blog": {
+        "header": {
+            "title": "Here will be my blog's title",
+            "subtitle": "Here will be the subtitle"
+        },
+        "overview": {
+            "search": {
+                "placeholder":"Search"
+            },
+            "filters": {
+                "category": {
+                    "name": "category",
+                    "values": [
+                        {
+                            "text": "Backend",
+                            "value": "backend"
+                        },
+                        {
+                            "text": "DevOps",
+                            "value": "devops"
+                        }
+    
+                    ]
+                },
+                "month":{
+                    "name": "month",
+                    "values": [
+                        {
+                            "text": "January",
+                            "value": 0
+                        },
+                        {
+                            "text": "February",
+                            "value": 1
+                        },
+                        {
+                            "text": "March",
+                            "value": 2
+                        },
+                        {
+                            "text": "April",
+                            "value": 3
+                        },
+                        {
+                            "text": "May",
+                            "value": 4
+                        },
+                        {
+                            "text": "June",
+                            "value": 5
+                        },
+                        {
+                            "text": "July",
+                            "value": 6
+                        },
+                        {
+                            "text": "August",
+                            "value": 7
+                        },
+                        {
+                            "text": "September",
+                            "value": 8
+                        },
+                        {
+                            "text": "October",
+                            "value": 9
+                        },
+                        {
+                            "text": "November",
+                            "value": 10
+                        },
+                        {
+                            "text": "December",
+                            "value": 11
+                        }
+                    ]
+                },
+                "year": {
+                    "name": "year",
+                    "values": [
+                        {
+                            "text": "2020",
+                            "value": 2020
+                        },
+                        {
+                            "text": "2019",
+                            "value": 2019
+                        }
+                    ]
+                }
+            }
+        }
     }
 }

@@ -13,9 +13,8 @@ const Index = (props) => {
     if (props.error) return <Error statusCode={props.error} />
 
     const content = require(`../config/content-${props.lang}.json`);
-    console.log("here");
     return (
-        <Layout content={content.layout}>
+        <Layout navbarStyling={{socialDisplay: true, fixed: 'fixed'}} content={content.layout}>
             <Home content={content.home}></Home>
             <About content={content.about}></About>
             <Projects content={content.projects} props={props.data}></Projects>
@@ -28,6 +27,7 @@ const Index = (props) => {
 Index.getInitialProps = async (ctx) => {
     let { lang } = nextCookies(ctx);
     lang = lang ? lang : "en";
+
     let res;
     if (process.browser) {
         res = await fetch('http://frontend.docker/api/projects',  {headers: {cookie: `lang=${lang}`}});
