@@ -13,13 +13,13 @@ const BlogContent = (props) => {
         <div className={classes.contentWrapper}>
             <div className={classes.background}>
                 <div className={classes.header}>
-                    <h1>{props.blog.header.title}</h1>
+                    <h1>A <span>W</span>e<span>E B</span>it <span>Dev</span> Blog</h1>
                     <p>{props.blog.header.subtitle}</p>
                     <div className={classes.socialMedia}>
-                        <a href={props.social.github} target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href={props.social.twitter} target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href={props.social.linkedin} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                        <a href={props.social.facebook} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+                        <a href={props.social.github} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href={props.social.twitter} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                        <a href={props.social.linkedin} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a href={props.social.facebook} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
                 </div>
                 </div>
                 <PostsOverview content={props.blog.overview} data={props.data}/>

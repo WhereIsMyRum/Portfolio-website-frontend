@@ -4,16 +4,16 @@ import colors from '../colors';
 
 const postThumbnailStyles = createUseStyles({
     wrapper: {
-        maxWidth: '360px',
+        width: '33.3%',
         height: 'auto',
         maxHeight: '400px',
-        margin: {
+        color: '#55595c',
+        padding: {
             top: '15px',
             right: '15px',
             bottom: '15px',
             left: '15px'
         },
-        backgroundColor: '#111',
         display: 'flex',
         flexDirection: 'column',
         '& img': {
@@ -21,11 +21,15 @@ const postThumbnailStyles = createUseStyles({
             filter: 'grayscale(100%)',
         },
         '&:hover': {
+            color: '#55595c',
+            '&> *': {
+                boxShadow: '14px 10px 13px -4px rgba(0,0,0,0.4)',
+            },
             '& img': {
                 filter: 'grayscale(0%)',
                 transform: 'scale(1.1)'
             }
-        }
+        },
     },
     thumbnail: {
         width: '100%',
@@ -33,21 +37,37 @@ const postThumbnailStyles = createUseStyles({
     },
     imgHoverZoom: {
         height: 'auto',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        boxShadow: '7px 23px 6px -6px rgba(0,0,0,0.4)',
+        transition: '.3s ease-in-out',
     },
     summaryWrapper: {
+        backgroundColor: '#111',
         width: '100%',
         padding: '10px',
+        boxShadow: '7px 7px 6px -6px rgba(0,0,0,0.4)',
+        transition: '.3s ease-in-out',
+        textAlign: 'center',
+        '& p': {
+            marginBottom: '4px',
+            fontSize: '0.8rem',
+            color: props =>`${props.paragraph} !important`,
+        },
+        '& h3': {
+            fontSize: '1.3rem',
+            color: props => `${props.header}`
+        }
     },
     title: {
-        color: `${colors.mint} !important`,
-        textTransform: 'capitalize'
+        color: props => `${props.header}`,
+        textTransform: 'none',
+        fontSize: '1.3rem',
     },
     description: {
 
     },
     month: {
-
+        color: props =>`${props.header}`
     },
     year: {
 
@@ -59,15 +79,27 @@ const postThumbnailStyles = createUseStyles({
 
     },
 
-    '@media (max-width: 1050px)': {
+    '@media (max-width: 1150px)': {
         wrapper: {
-            maxWidth: '283px'
+            width: '50%',
+            padding: {
+                top: '15px',
+                right: '10px',
+                bottom: '10px',
+                left: '15px'
+            },
         }
     },
 
-    '@media (max-width: 860px)': {
+    '@media (max-width: 740px)': {
         wrapper: {
-            maxWidth: '360px'
+            width: '100%',
+            padding: {
+                top: '15px',
+                right: '15px',
+                bottom: '15px',
+                left: '15px'
+            },
         }
     }
 });

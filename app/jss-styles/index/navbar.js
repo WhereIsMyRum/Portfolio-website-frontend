@@ -6,7 +6,6 @@ const navbarStyles = createUseStyles({
     navbar: {
         visibility: 'visible',
         width: '100vw',
-        height: '47px',
         zIndex: 100,
         backgroundColor: "#131313",
         opacity: "0.8",

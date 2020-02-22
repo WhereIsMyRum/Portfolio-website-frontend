@@ -7,6 +7,7 @@ import Layout from '../components/layout';
 import { fadeOutElement } from  '../utils/utils';
 import BlogContent from '../components/blog/blogContent';
 import PostsOverview from  '../components/blog/postsOverview';
+import CopyrightFooter from '../components/copyrightFooter';
 
 
 const Blog = (props) => {
@@ -23,6 +24,7 @@ const Blog = (props) => {
             <div id="blog">
                 <BlogContent data={props.data} blog={content.blog} social={content.layout.social}/>
             </div>
+            <CopyrightFooter />
         </Layout>
     );
 }
@@ -33,7 +35,7 @@ Blog.getInitialProps = async (ctx) => {
 
     let res;
     if (process.browser) {
-        res = await fetch('http://frontend.docker/api/blog/posts');
+        res = await fetch('/api/blog/posts');
     } else {
         res = await fetch('http://backend:8080/api/blog/posts');
     }

@@ -6,7 +6,7 @@ import Contact from '../components/index/contact';
 import fetch from 'isomorphic-unfetch';
 import nextCookies from 'next-cookies';
 import Error from 'next/error';
-import CopyrightFooter from '../components/index/copyrightFooter';
+import CopyrightFooter from '../components/copyrightFooter';
 
 
 const Index = (props) => {
@@ -30,10 +30,11 @@ Index.getInitialProps = async (ctx) => {
 
     let res;
     if (process.browser) {
-        res = await fetch('http://frontend.docker/api/projects',  {headers: {cookie: `lang=${lang}`}});
+        res = await fetch('/api/projects', {headers: {cookie: `lang=${lang}`}});
     } else {
         res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
     }
+
     if (res.status === 200) {
         const data = await res.json();
         return {

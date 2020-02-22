@@ -31,7 +31,6 @@ const blogHeaderStyles = createUseStyles({
             transition: '.3s linear',
             '&:hover': {
                 color: colors.lightMint,
-                transform: 'rotateY(180deg)'
             }
         }
     },
@@ -45,10 +44,17 @@ const blogHeaderStyles = createUseStyles({
         },
         textAlign: 'center',
         '& h1': {
+            padding: '0 10px',
             marginBottom: '0',
-            color: `${colors.mint} !important`,
+            color: `${colors.mint}`,
+            textTransform: 'capitalize',
+            '& span': {
+                color: `${colors.darkMint}`,
+                fontSize: '2.2rem'
+            }
         },
         '& p': {
+            padding: '0 10px',
             fontSize: '1.1rem',
         }
     }

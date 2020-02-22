@@ -4,28 +4,36 @@ import  colors from '../colors';
 
 const postsOverviewStyles = createUseStyles({
     wrapper: {
-        width: '80vw',
+        width: '85vw',
         backgroundColor: "#171717",
+        boxShadow: '11px 11px 6px -6px rgba(0,0,0,0.4)',
         minHeight: '100vh',
         margin: '0 auto',
-        padding: '30px',
+        padding: {
+            top: '30px',
+            right: '30px',
+            bottom: '30px',
+            left: '30px'
+        },
         display: 'flex',
-        flexDirection: 'row-reverse',
-        flexWrap: 'wrap'
+        flexDirection: 'column',
+    },
+
+    filtersWrapper: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: '0'
     },
 
     postsWrapper: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        width: '1170px',
-        margin: '0 auto',
-        alignContent: 'flex-start',
+        margin: '30px 0 10px',
+        minWidth: '80%'
     },
 
-    rightColumn: {
-        flexGrow: '1',
-    },
     buttonWrapper: {
         width: '90%',
         margin: '0 auto'
@@ -42,37 +50,16 @@ const postsOverviewStyles = createUseStyles({
         }
     },
 
-    '@media (max-width: 1540px)' : {
-        postsWrapper: {
-            width: '780px'
-        }
-    },
-
-    '@media (max-width: 1050px)' : {
-        postsWrapper: {
-            width: '626px'
-        }
-    },
-
-    '@media (max-width: 860px)' : {
-        postsWrapper: {
-            width: '390px'
-        }
-    },
-
-    '@media (max-width: 600px)': {
+    '@media (max-width: 1150px)': {
         wrapper: {
-            width: '90vw',
             padding: {
-                left: '5px',
-                right: '5px'
-            }
+                top: '30px',
+                right: '20px',
+                bottom: '30px',
+                left: '20px'
+            },
         }
     },
-
-
-
-    
 });
 
 export default postsOverviewStyles;

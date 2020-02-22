@@ -1,4 +1,4 @@
-import copyrightFooterStyles from '../../jss-styles/index/copyrightFooter';
+import copyrightFooterStyles from '../jss-styles/copyrightFooter';
 
 
 const CopyrightFooter = (props) => {

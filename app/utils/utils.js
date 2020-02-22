@@ -60,10 +60,55 @@ animateOpacity = (elem) => {
     }
 };
 
+const formatDate = (date, monthFormat = 'short') => {
+    const d = new Date(date);
+    return {
+        month: d.toLocaleString('en-US', {month: monthFormat}),
+        year: d.getFullYear(),
+        day: d.getDate(),
+        time: `${d.getHours() < 10 ? '0' + d.getHours() : d.getHours()}:${d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()}`
+    }
+};
 
+const capitalize = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
+
+const parsePostTitle = (title) => {
+    let parsedTitle = title.replace(/\-/g, " ").replace(/\_/g, "-");
+    return capitalize(parsedTitle);
+};
+
+const getColorScheme = (colorScheme) => {
+    const colors = require('../jss-styles/colors').default;
+
+    const resultColorScheme = {};
+    const defaultColorScheme = {
+        paragraph: `${colors.defaultParagraph}`,
+        header: `${colors.mint}`,
+        standOut: `${colors.lightMint}`,
+        secondaryBackground: '#0d0d0d',
+        background: "#111"
+    }
+
+    if (!colorScheme) {
+        return defaultColorScheme;
+    }
+
+    Object.keys(defaultColorScheme).forEach(key => {
+        colorScheme[key] ? 
+        resultColorScheme[key] = colorScheme[key] : 
+        resultColorScheme[key] = defaultColorScheme[key]
+    });
+
+    return resultColorScheme;
+}
 
 
 module.exports = {
     fadeOutElement,
     animateVh,
+    formatDate,
+    parsePostTitle,
+    getColorScheme
 }

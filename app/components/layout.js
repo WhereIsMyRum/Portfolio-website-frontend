@@ -1,10 +1,13 @@
 import { JssProvider } from 'react-jss';
+import { getColorScheme } from '../utils/utils';
 import Head from 'next/head';
 
 import Navbar from './index/navbar';
-import Loader from './index/loader'
+import Loader from './loader'
 
 const Layout = (props) => {
+    const colorSchema = getColorScheme(props.colorScheme);
+    console.log(colorSchema);
     return (
         <JssProvider id={{ minify: true }}>
             <div id="loader">
@@ -25,7 +28,7 @@ const Layout = (props) => {
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" />
             </Head>
-            <Navbar navbarStyling={props.navbarStyling} social={props.content.social} content={props.content.navbar} />
+            <Navbar navbarStyling={props.navbarStyling} social={props.content.social} content={props.content.navbar} colorSchema={colorSchema} />
             <div className="container px-0 mx-0">
                 {props.children}
             </div>

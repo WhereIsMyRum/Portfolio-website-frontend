@@ -51,27 +51,24 @@ const PostsOverview = (props) => {
         }
     }
 
-    const clearFilters = () => {
-        setCategoryFilter([]); setMonthFilter([]); setYearFilter([]);
-    }
 
     return (
         <div className={classes.wrapper}>
             <div className={classes.rightColumn}>
                 <SearchBar content={props.content.search} />
-                <FilterSelector setFilterValue={setCategoryFilter} filtered={categoryFilter} data={props.content.filters.category}/>
-                <FilterSelector setFilterValue={setMonthFilter} filtered={monthFilter} fullBlogPostsList={props.data} setBlogPosts={setBlogPosts} blogPosts={blogPosts} data={props.content.filters.month}/>
-                <FilterSelector setFilterValue={setYearFilter} filtered={yearFilter} fullBlogPostsList={props.data} setBlogPosts={setBlogPosts} blogPosts={blogPosts} data={props.content.filters.year}/>
-                <div className={classes.buttonWrapper}>
-                    <button className={classes.clearButton} onClick={clearFilters}>Clear filters</button>
+                <div className={classes.filtersWrapper}>
+                    <FilterSelector setFilterValue={setCategoryFilter} filtered={categoryFilter} data={props.content.filters.category}/>
+                    <FilterSelector setFilterValue={setYearFilter} filtered={yearFilter} fullBlogPostsList={props.data} setBlogPosts={setBlogPosts} blogPosts={blogPosts} data={props.content.filters.year}/>
+                    <FilterSelector setFilterValue={setMonthFilter} filtered={monthFilter} fullBlogPostsList={props.data} setBlogPosts={setBlogPosts} blogPosts={blogPosts} data={props.content.filters.month}/>
                 </div>
             </div>
             <div className={classes.postsWrapper}>
                 {blogPosts.map(post => {
-                    return <PostThumbnail data={post} key={post._id} />
+                    return <PostThumbnail data={post} colorScheme={post.colorScheme} key={post._id} />
                 })}
             </div>
         </div>
     );
 };
+
 export default PostsOverview;

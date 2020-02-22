@@ -3,29 +3,38 @@ import { faGithub, faTwitter, faFacebook, faLinkedin } from '@fortawesome/free-b
 import LanguageSelector from './languageSelector';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import navbarStyles from '../../jss-styles/index/navbar';
 
 
 const Navbar = (props) => {
     const router = useRouter();
-    const classes = navbarStyles();
+    console.log(props.colorSchema);
+    const classes = navbarStyles(props.colorSchema);
     const [focus, setFocus] = useState('');
 
     useEffect(() => {
         if (window.localStorage.getItem('scroll') && window.localStorage.getItem('scroll') !== 'null') {
             const focus = window.localStorage.getItem('scroll');
-            document.getElementById(focus).scrollIntoView({
-                behavior: 'smooth'
-            })
+            try {
+                document.getElementById(focus).scrollIntoView({
+                    behavior: 'smooth'
+                })
+            } catch (e) {
+                window.localStorage.removeItem('scroll');
+            }
+
             setFocus(focus);
             window.localStorage.removeItem('scroll');
 
-        } else if (focus) {
+        } else if (focus !== '' && focus) {
             window.localStorage.removeItem('scroll');
             document.getElementById(focus).scrollIntoView({
                 behavior: 'smooth'
             })
+        } else {
+            window.localStorage.removeItem('scroll');
         }
 
     }, [focus])
@@ -54,6 +63,7 @@ const Navbar = (props) => {
                     if (link.getAttribute('data-link')) {
                         window.localStorage.setItem('scroll', link.getAttribute('data-link'));
                     }
+                    console.log(link.getAttribute('data-path'));
                     router.push(link.getAttribute('data-path'));
                 } else if (focus === link.getAttribute('data-link')) {
                     setFocus('');
@@ -84,7 +94,7 @@ const Navbar = (props) => {
 
                 <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                     <ul className='navbar-nav ml-auto'>
-                        <li className={`nav-item`}>
+                        <li className={`${classes.navLinkWrapper} nav-item`}>
                             <span className={`${classes.navLink} nav-link`} data-path='/' data-link='home'>{props.content.section1}</span>
                         </li>
                         <li className={`nav-item`}>
@@ -97,7 +107,7 @@ const Navbar = (props) => {
                             <span className={`${classes.navLink} nav-link`} data-path='/' data-link='contact'>{props.content.section4}</span>
                         </li>
                         <li className={`nav-item`}>
-                            <span className={`${classes.navLink} nav-link`} data-path='/blog' data-link='navbar' >{props.content.section5}</span>
+                            <Link href="/blog"><a className={`${classes.navLink} nav-link`} data-path='/blog' data-link='navbar' >{props.content.section5}</a></Link>
                         </li>
                         <li className={`${classes.langSelect} nav-item`}>
                             <span onClick={() => toggleLanguageSelector('open')} className={`${classes.navLink} nav-link`} data-link=''>{props.content.lang}</span>
@@ -107,23 +117,14 @@ const Navbar = (props) => {
             </nav>
             { props.navbarStyling.socialDisplay &&
                 <div className={classes.socialMedia}>
-                    <a href={props.social.github} target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href={props.social.twitter} target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a href={props.social.linkedin} target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href={props.social.facebook} target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+                    <a href={props.social.github} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href={props.social.twitter} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                    <a href={props.social.linkedin} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href={props.social.facebook} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
                 </div>
             }
         </div>
     )
 };
-
-/*<div className={`${classes.languageSelector} `} id='language'>
-                <select className={`${classes.select}`}>
-                    {content.availableLanguages.map((lang) => {
-                    const key = Object.keys(lang)[0];
-                    return <option key={key} className={classes.langValue} tabIndex='-1' value={key}>{lang[key]}</option>
-                    })}
-                </select>
-            </div>*/
 
 export default Navbar;
