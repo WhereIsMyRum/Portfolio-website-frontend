@@ -142,9 +142,6 @@ const Navbar = (props) => {
                         <li className={`nav-item`}>
                             <span className={`${classes.navLink} nav-link`} data-path='/' data-link='contact'>{props.content.section4}</span>
                         </li>
-                        <li className={`nav-item`}>
-                            <Link href="/blog"><a className={`${classes.navLink} nav-link`} data-path='/blog' data-link='__next' >{props.content.section5}</a></Link>
-                        </li>
                         <li className={`${classes.langSelect} nav-item`}>
                             <span onClick={() => toggleLanguageSelector('open')} className={`${classes.navLink} nav-link`} data-link=''>{props.content.lang}</span>
                         </li>

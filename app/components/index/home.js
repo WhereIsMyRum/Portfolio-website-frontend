@@ -29,7 +29,6 @@ const Home = (props) => {
                     <span className={'nav-link'} data-path="/" data-link="about">About</span>
                     <span className={'nav-link'} data-path="/" data-link="projects">Projects</span>
                     <span className={'nav-link'} data-path="/" data-link="contact">Contact</span>
-                    <Link href="/blog"><span className={'nav-link'} data-path="/blog" data-link="__next">Blog</span></Link>
                     <span onClick={() => toggleLanguageSelector('open')} className={'nav-link'}>Language</span>
                 </div>
             </nav>
