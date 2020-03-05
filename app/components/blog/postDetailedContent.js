@@ -8,6 +8,8 @@ import BlogPostShare from './blogPostShare';
 import CommentForm from './commentForm';
 import Comment from './comment';
 
+import { insertImages } from '../../utils/postRenderer';
+
 
 const PostDetailedContent = (props) => {
     const classes = postDetailedContentStyles(props.colorScheme);
@@ -24,7 +26,7 @@ const PostDetailedContent = (props) => {
     return (
         <div className={classes.wrapper}>
             <div className={`${classes.postContent} offset-lg-2 col-lg-6 offset-md-2 col-md-8`}>
-                {renderHTML(md.render(insertImages(props.text)))}
+                {renderHTML(md.render(insertImages(props.title, props.text, props.images)))}
             </div>
             <div className={`${classes.leftColumn} offset-lg-0 col-lg-4 offset-md-2 col-md-8`} >
                 <SubscribeForm colorScheme={props.colorScheme}/>

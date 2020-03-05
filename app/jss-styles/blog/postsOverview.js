@@ -4,19 +4,26 @@ import  colors from '../colors';
 
 const postsOverviewStyles = createUseStyles({
     wrapper: {
-        width: '85vw',
-        backgroundColor: "#171717",
-        boxShadow: '11px 11px 6px -6px rgba(0,0,0,0.4)',
         minHeight: '100vh',
         margin: '0 auto',
         padding: {
-            top: '30px',
+            top: '50px',
             right: '30px',
             bottom: '30px',
             left: '30px'
         },
         display: 'flex',
         flexDirection: 'column',
+        '& h2': {
+            color: colors.mint,
+            paddingLeft: '30px',
+            fontFamily: 'NeonTubes',
+            fontSize: '2.3rem'
+        }
+    },
+
+    rightColumn: {
+        paddingTop: '30px'
     },
 
     filtersWrapper: {

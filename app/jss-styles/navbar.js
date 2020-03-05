@@ -1,10 +1,11 @@
 import { createUseStyles } from 'react-jss';
-import colors from '../colors';
+import colors from './colors';
 
 
 const navbarStyles = createUseStyles({
-    navbar: {
+    navbar: props => ({
         visibility: 'visible',
+        right: '-100%',
         width: '100vw',
         zIndex: 100,
         backgroundColor: "#131313",
@@ -12,17 +13,22 @@ const navbarStyles = createUseStyles({
         transition: '0.5s ease-out',
         marginBottom: '0 !important',
         top: '0',
-    },
+        position: 'fixed',
+        textTransform: 'none',
+        '& span.active': {
+            color: `${props.header} !important`
+        }
+    }),
 
 
-    navLink: {
+    navLink: props => ({
         transition: '.3s ease-out',
-        color: `${colors.mint} !important`,
+        color: `#808080 !important`,
         '&:hover': {
             cursor: 'pointer',
-            color: `${colors.lightMint} !important`
+            color: `${props.standOut} !important`
         }
-    },
+    }),
 
 
     socialMedia: {
@@ -40,10 +46,10 @@ const navbarStyles = createUseStyles({
         '& svg': {
             height: '40px',
             width: '40px',
-            color: colors.mint,
+            color: props => props.header,
             transition: '.3s linear',
             '&:hover': {
-                color: colors.lightMint,
+                color: props => props.standOut,
                 transform: 'rotateY(180deg)'
             }
         }
@@ -51,6 +57,26 @@ const navbarStyles = createUseStyles({
 
     langSelect: {
         marginLeft: '35px',
+    },
+
+    scrollUp: {
+        backgroundColor: props => props.header,
+        color: props => props.background,
+        zIndex: '100',
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        padding: '10px',
+        borderRadius: '100%',
+        transition: '.3s ease-in-out',
+        '& svg': {
+            height: '25px',
+            width: '25px'
+        },
+        '&:hover': {
+            backgroundColor: props => props.standOut,
+            cursor: 'pointer'
+        }
     },
 
     '@media (max-width: 1024px)': {

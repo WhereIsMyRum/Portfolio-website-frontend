@@ -102,6 +102,21 @@ const getColorScheme = (colorScheme) => {
     });
 
     return resultColorScheme;
+};
+
+const getWebsiteRootUrl = () => {
+    return process.browser ? 
+            window.location.protocol + "://" + window.location.hostname
+            : process.env.ROOT_URL;
+}
+
+const toggleLanguageSelector = (dir) => {
+    const langSelect = document.getElementById('language');
+    let setInitialState = false;
+
+    if (dir === 'open') setInitialState = true;
+
+    animateVh(dir, langSelect, setInitialState);
 }
 
 
@@ -110,5 +125,7 @@ module.exports = {
     animateVh,
     formatDate,
     parsePostTitle,
-    getColorScheme
+    getColorScheme,
+    getWebsiteRootUrl,
+    toggleLanguageSelector
 }

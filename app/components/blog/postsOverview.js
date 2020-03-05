@@ -53,7 +53,8 @@ const PostsOverview = (props) => {
 
 
     return (
-        <div className={classes.wrapper}>
+        <div id="posts" className={classes.wrapper}>
+            <h2>Posts</h2>
             <div className={classes.rightColumn}>
                 <SearchBar content={props.content.search} />
                 <div className={classes.filtersWrapper}>

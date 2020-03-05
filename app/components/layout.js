@@ -1,13 +1,12 @@
 import { JssProvider } from 'react-jss';
-import { getColorScheme } from '../utils/utils';
+import { getColorScheme, getWebsiteRootUrl } from '../utils/utils';
 import Head from 'next/head';
-
-import Navbar from './index/navbar';
+import Navbar from './navbar';
 import Loader from './loader'
 
 const Layout = (props) => {
     const colorSchema = getColorScheme(props.colorScheme);
-    console.log(colorSchema);
+
     return (
         <JssProvider id={{ minify: true }}>
             <div id="loader">
@@ -19,7 +18,11 @@ const Layout = (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="theme-color" content="#ffffff"></meta>
                 <meta name="description" content={props.content.meta.description}></meta>
-                <meta property="og:image" content="https://piotrpolcik.pl/static/images/me_bw.jpg" />
+                <meta property="og:title" content={props.og.title} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={getWebsiteRootUrl() + props.og.url} />
+                <meta property="og:description" content={props.og.description} /> 
+                <meta property="og:image" content={getWebsiteRootUrl() + props.og.image} />
                 <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"></link>
                 <link rel="stylesheet" href="/static/styles/styles.css"></link>
                 <link rel="shortcut icon" type="image/png" href="/static/images/Logo_light.png" />
@@ -28,7 +31,7 @@ const Layout = (props) => {
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" />
             </Head>
-            <Navbar navbarStyling={props.navbarStyling} social={props.content.social} content={props.content.navbar} colorSchema={colorSchema} />
+            <Navbar styling={props.navbar} social={props.content.social} content={props.content.navbar} colorSchema={colorSchema} />
             <div className="container px-0 mx-0">
                 {props.children}
             </div>

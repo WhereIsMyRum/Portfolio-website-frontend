@@ -20,6 +20,41 @@ const homeStyles = createUseStyles({
         alignItems: 'center'
     },
 
+    navbar: {
+        position: 'fixed',
+        width: '67%',
+        fontSize: '1.2rem',
+        top: 35,
+        margin: '0 auto',
+        zIndex: 10,
+        '& div': {
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            width: '100%',
+            margin: 0,
+            padding: 0,
+            "& span": {
+                display: 'block',
+                padding: '15px 0',
+                textAlign: 'center',
+                margin: 0,
+                padding: '10px',
+                color: '#808080',
+                transition: '.3s ease-in-out',
+                '&:hover': {
+                    cursor: 'pointer',
+                    color: `${colors.mint}`
+                }
+            },
+            '& span.active': {
+                color: colors.mint,
+                borderBottom: `1px solid ${colors.mint}`
+            }
+        }
+    },
+
     parallaxImg: {
         width: '100vw',
         height: '100vh',
@@ -88,14 +123,18 @@ const homeStyles = createUseStyles({
         }
     },
 
+    '@media (min-width: 2000px)': {
+        introduction: {
+            fontSize: '2.7rem'
+        }
+    },
+
     '@media (max-width: 1024px)': {
         logo: {
             top: '65px',
             left: '20px'
         }
     },
-
-
 
     '@media (max-width: 640px)': {
         logo: {
@@ -104,11 +143,13 @@ const homeStyles = createUseStyles({
         }
     },
 
-    '@media (min-width: 2000px)': {
-        introduction: {
-            fontSize: '2.7rem'
+    '@media (max-width: 770px)': {
+        navbar: {
+            display: 'none'
         }
     }
+
+
 });
 
 export default homeStyles;

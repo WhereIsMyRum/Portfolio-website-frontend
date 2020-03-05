@@ -24,9 +24,9 @@ const BlogPost = (props) => {
     }, []);
 
     return (
-        <Layout navbarStyling={{socialDisplay: false, fixed: ''}} content={content.layout}>
+        <Layout navbarStyling={{socialDisplay: false, fixed: ''}} content={content.layout} colorScheme={props.data.colorScheme}>
             <div id="blog">
-                <PostDetailedHeader title={props.data.title} thumb={props.data.thumb} created={props.data.created} colorScheme={getColorScheme(props.data.colorScheme)} />
+                <PostDetailedHeader title={props.data.title} thumb={props.data.thumb} images={props.data.images} created={props.data.created} colorScheme={getColorScheme(props.data.colorScheme)} />
                 <PostDetailedContent title={props.data.title} text={props.data.fullText} images={props.data.images} colorScheme={getColorScheme(props.data.colorScheme)} comments={props.data.comments}/>
             </div>
             <CopyrightFooter />

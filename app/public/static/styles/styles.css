@@ -20,6 +20,16 @@ html, body {
     src: url("/static/fonts/action-of-the-time-new.ttf")
 }
 
+@font-face {
+    font-family: Elianto;
+    src: url("/static/fonts/elianto.otf")
+}
+
+@font-face {
+    font-family: Neontubes;
+    src: url("/static/fonts/NeonTubes2.otf")
+}
+
 body::-webkit-scrollbar {
     width: 0 !important
 }

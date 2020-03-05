@@ -13,13 +13,15 @@ const Index = (props) => {
     if (props.error) return <Error statusCode={props.error} />
 
     const content = require(`../config/content-${props.lang}.json`);
+    const layout = require('../config/layout-index.json');
+
     return (
-        <Layout navbarStyling={{socialDisplay: true, fixed: 'fixed'}} content={content.layout}>
+        <Layout navbar={layout.navbar} og={layout.og} content={content.layout}>
             <Home content={content.home}></Home>
             <About content={content.about}></About>
             <Projects content={content.projects} props={props.data}></Projects>
             <Contact content={content.contact}></Contact>
-            <CopyrightFooter  />
+            <CopyrightFooter  styling={layout.footer}/>
         </Layout>
     );
 };

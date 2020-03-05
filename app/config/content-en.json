@@ -97,8 +97,15 @@
     },
     "blog": {
         "header": {
-            "title": "Here will be my blog's title",
-            "subtitle": "Here will be the subtitle"
+            "title": {
+                "st": "A We",
+                "nd": "e",
+                "rd": "B",
+                "fth": "i",
+                "vth": "t",
+                "sth": "Dev Blog"
+            },
+            "subtitle": "A self-study developer's blog"
         },
         "overview": {
             "search": {

@@ -12,7 +12,9 @@ import CopyrightFooter from '../components/copyrightFooter';
 
 const Blog = (props) => {
     if (props.error) return <Error statusCode={props.error} />
+
     const content = require(`../config/content-${props.lang}.json`);
+    const layout = require('../config/layout-blog.json');
 
     useEffect(() => {
         const loader = document.getElementById('loader');
@@ -20,11 +22,11 @@ const Blog = (props) => {
     }, []);
 
     return (
-        <Layout navbarStyling={{socialDisplay: false, fixed: ''}} content={content.layout}>
+        <Layout navbar={layout.navbar} og={layout.og} content={content.layout}>
             <div id="blog">
                 <BlogContent data={props.data} blog={content.blog} social={content.layout.social}/>
             </div>
-            <CopyrightFooter />
+            <CopyrightFooter styling={layout.footer}/>
         </Layout>
     );
 }
@@ -38,12 +40,23 @@ Blog.getInitialProps = async (ctx) => {
         res = await fetch('/api/blog/posts');
     } else {
         res = await fetch('http://backend:8080/api/blog/posts');
-    }
+    };
 
-    if (res.status === 200) {
+    const og = {
+        title: 'A Wee Bit Dev Blog',
+        url: process.browser ? 
+                window.location.protocol + '://' + window.location.hostname + '/blog'
+                : process.env.ROOT_URL + '/blog',
+        image: process.browser ? 
+                    window.location.protocol + '://' + window.location.hostname + '/static/images/weebitdev.png'
+                    : process.env.ROOT_URL + '/static/images/weebitdev.png'
+    };
+
+    if (res.status  === 200) {
         const data = await res.json();
         return {
             'data': data,
+            'og': og,
             'lang': lang
         };
     }
