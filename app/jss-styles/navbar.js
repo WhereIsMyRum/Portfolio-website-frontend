@@ -5,18 +5,25 @@ import colors from './colors';
 const navbarStyles = createUseStyles({
     navbar: {
         visibility: 'visible',
-        position: 'fixed',
+        right: '-100%',
         width: '100vw',
         zIndex: 100,
-        right: '-100%',
-        backgroundColor: "#0a0a0a",
+        backgroundColor: "#131313",
         opacity: "0.8",
         transition: '0.5s ease-out',
+        marginBottom: '0 !important',
+        top: '0',
+        position: 'fixed',
+        textTransform: 'none',
+        '& span.active': {
+            color: `${colors.mint} !important`
+        }
     },
+
 
     navLink: {
         transition: '.3s ease-out',
-        color: `${colors.mint} !important`,
+        color: `#808080 !important`,
         '&:hover': {
             cursor: 'pointer',
             color: `${colors.lightMint} !important`
@@ -49,7 +56,27 @@ const navbarStyles = createUseStyles({
     },
 
     langSelect: {
-        marginLeft: '40px',
+        marginLeft: '35px',
+    },
+
+    scrollUp: {
+        backgroundColor: colors.mint,
+        color: colors.mint,
+        zIndex: '100',
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        padding: '10px',
+        borderRadius: '100%',
+        transition: '.3s ease-in-out',
+        '& svg': {
+            height: '25px',
+            width: '25px'
+        },
+        '&:hover': {
+            backgroundColor: colors.lightMint,
+            cursor: 'pointer'
+        }
     },
 
     '@media (max-width: 1024px)': {

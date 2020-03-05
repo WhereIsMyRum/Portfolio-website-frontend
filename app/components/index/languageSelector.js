@@ -3,7 +3,7 @@ import cookie from 'js-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import languageSelectorStyles from '../jss-styles/languageSelector';
+import languageSelectorStyles from '../../jss-styles/index/languageSelector';
 
 
 const LanguageSelector = (props) => {

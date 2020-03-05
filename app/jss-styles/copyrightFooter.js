@@ -5,13 +5,14 @@ import colors from './colors';
 const copyrightFooterStyles = createUseStyles({
     footer: {
         color: colors.mint,
-        position: 'absolute',
+        position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         bottom: 0,
-        left: '50%',
-        transform: 'translateX(-50%)',
         fontSize: '11px',
+        backgroundColor: "#151515",
+        width:'100vw',
+        height: '32px',
         margin: {
             left: 'auto',
             right: 'auto'

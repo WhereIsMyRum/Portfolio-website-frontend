@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import renderHTML from 'react-render-html';
 
-import detailedProjectViewStyles from '../jss-styles/detailedProjectView';
-import Loader from '../components/loader';
+import detailedProjectViewStyles from '../../jss-styles/index/detailedProjectView';
+import Loader from '../loader';
 
 
 const DetailedProjectView = (props) => {
@@ -23,7 +23,7 @@ const DetailedProjectView = (props) => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const result = await axios(`api/projects/${props.id}`);
+                const result = await axios(`/api/projects/${props.id}`);
                 setTitle({
                     'title': result.data.title.title,
                     'link': result.data.title.url
@@ -39,7 +39,6 @@ const DetailedProjectView = (props) => {
         }
         fetchData();
     }, [])
-    console.log(props);
 
     return (
         <div className={classes.projectContainer}>
@@ -50,11 +49,11 @@ const DetailedProjectView = (props) => {
                         </div>}
             {!isLoading && !code500 &&sections.length > 0 && technologies.length > 0 &&
                 <div className={`${props.style}-wrapper`}>
-                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`} data-history="pop"><FontAwesomeIcon icon={faArrowLeft} />{props.content.backButton}</div>
+                    <div onClick={() => props.setDetailID('')} className={`${classes.backButton} button back-button`}><FontAwesomeIcon icon={faArrowLeft} />{props.content.backButton}</div>
                     <div className={`${classes.title} ${classes.innerContainer} ${props.style}`}>
                         <h4>{title.title}</h4>
                         <div className={`${classes.link} button`}>
-                            <a href={title.link} target="_blank">{props.content.githubButton}</a>
+                            <a href={title.link} rel="nofollow" target="_blank">{props.content.githubButton}</a>
                         </div>
                     </div>
                     <div>

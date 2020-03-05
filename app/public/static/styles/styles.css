@@ -4,6 +4,7 @@
 }
 
 html, body {
+    background-color: #151515;
     overflow-x: hidden;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
@@ -15,6 +16,10 @@ body::-webkit-scrollbar {
 
 a {
     text-decoration: none;
+}
+
+.fixed {
+    position: fixed;
 }
 
 select {
@@ -43,10 +48,10 @@ a:hover {
 }
 
 #loader {
+    display: flex;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 999;

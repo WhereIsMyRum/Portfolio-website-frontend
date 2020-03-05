@@ -2,11 +2,11 @@ import copyrightFooterStyles from '../jss-styles/copyrightFooter';
 
 
 const CopyrightFooter = (props) => {
-    const classes = copyrightFooterStyles();
+    const classes = copyrightFooterStyles(props.styling);
     return (
         <div className={classes.footer}>
-            <p className={classes.name}>{props.content.text}</p>
-            <p>&copy; {props.content.place} {props.content.date}</p>
+            <p className={classes.name}>Piotr Polcik</p>
+            <p>&copy; January 2020</p>
         </div>
 
     )
