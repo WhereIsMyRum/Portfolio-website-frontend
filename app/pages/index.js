@@ -17,7 +17,7 @@ const Index = (props) => {
 
     return (
         <Layout navbar={layout.navbar} og={layout.og} content={content.layout}>
-            <Home content={content.home}></Home>
+            <Home menu={content.layout.navbar} content={content.home}></Home>
             <About content={content.about}></About>
             <Projects content={content.projects} props={props.data}></Projects>
             <Contact content={content.contact}></Contact>

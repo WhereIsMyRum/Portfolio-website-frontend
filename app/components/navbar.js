@@ -114,7 +114,7 @@ const Navbar = (props) => {
                             }
                         }
                     },
-                    offset: 0
+                    offset: 20
                 })
             }
         });

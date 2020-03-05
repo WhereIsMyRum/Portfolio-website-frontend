@@ -25,11 +25,11 @@ const Home = (props) => {
         <div className={classes.wrapper}>
             <nav id="home-nav"className={classes.navbar}>
                 <div>
-                    <span className={'active nav-link'} data-path="/" data-link="home">Home</span>
-                    <span className={'nav-link'} data-path="/" data-link="about">About</span>
-                    <span className={'nav-link'} data-path="/" data-link="projects">Projects</span>
-                    <span className={'nav-link'} data-path="/" data-link="contact">Contact</span>
-                    <span onClick={() => toggleLanguageSelector('open')} className={'nav-link'}>Language</span>
+                    <span className={'active nav-link'} data-path="/" data-link="home">{props.menu.section1}</span>
+                    <span className={'nav-link'} data-path="/" data-link="about">{props.menu.section2}</span>
+                    <span className={'nav-link'} data-path="/" data-link="projects">{props.menu.section3}</span>
+                    <span className={'nav-link'} data-path="/" data-link="contact">{props.menu.section4}</span>
+                    <span onClick={() => toggleLanguageSelector('open')} className={'nav-link'}>{props.menu.lang}</span>
                 </div>
             </nav>
             <div className={classes.parallaxImg}>
