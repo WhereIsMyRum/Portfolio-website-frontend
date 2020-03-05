@@ -11,6 +11,5 @@ const CopyrightFooter = (props) => {
 
     )
 };
-//<p>&copy; {props.content.place} {props.content.date}</p>
 
 export default CopyrightFooter;

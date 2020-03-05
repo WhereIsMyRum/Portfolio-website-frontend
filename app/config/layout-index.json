@@ -1,23 +1,15 @@
 {
         "navbar": {
-            "socialDisplay": true,
-            "scrollUp": {
-                "setup": false
-            },
-            "navbarDisplay": true,
-            "fixed": "",
             "waypoint": {
                 "setup": true,
                 "id": "about",
                 "offset": -50
-            },
-            "styling": ""
+            }
         },
         "og": {
             "title": "Piotr Połcik | Develop the web and have fun!",
             "description": "My name is Piotr, and I am a Web developer. Visit my website!",
             "url": "/",
             "image": "/static/images/me_bw.jpg"
-        },
-        "footer": ""
+        }
 }

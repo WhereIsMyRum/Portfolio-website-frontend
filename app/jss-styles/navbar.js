@@ -3,7 +3,7 @@ import colors from './colors';
 
 
 const navbarStyles = createUseStyles({
-    navbar: props => ({
+    navbar: {
         visibility: 'visible',
         right: '-100%',
         width: '100vw',
@@ -16,19 +16,19 @@ const navbarStyles = createUseStyles({
         position: 'fixed',
         textTransform: 'none',
         '& span.active': {
-            color: `${props.header} !important`
+            color: `${colors.mint} !important`
         }
-    }),
+    },
 
 
-    navLink: props => ({
+    navLink: {
         transition: '.3s ease-out',
         color: `#808080 !important`,
         '&:hover': {
             cursor: 'pointer',
-            color: `${props.standOut} !important`
+            color: `${colors.lightMint} !important`
         }
-    }),
+    },
 
 
     socialMedia: {
@@ -46,10 +46,10 @@ const navbarStyles = createUseStyles({
         '& svg': {
             height: '40px',
             width: '40px',
-            color: props => props.header,
+            color: colors.mint,
             transition: '.3s linear',
             '&:hover': {
-                color: props => props.standOut,
+                color: colors.lightMint,
                 transform: 'rotateY(180deg)'
             }
         }
@@ -60,8 +60,8 @@ const navbarStyles = createUseStyles({
     },
 
     scrollUp: {
-        backgroundColor: props => props.header,
-        color: props => props.background,
+        backgroundColor: colors.mint,
+        color: colors.mint,
         zIndex: '100',
         position: 'fixed',
         bottom: '20px',
@@ -74,7 +74,7 @@ const navbarStyles = createUseStyles({
             width: '25px'
         },
         '&:hover': {
-            backgroundColor: props => props.standOut,
+            backgroundColor: colors.lightMint,
             cursor: 'pointer'
         }
     },

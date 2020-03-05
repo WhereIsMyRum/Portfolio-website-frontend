@@ -123,8 +123,7 @@ const Navbar = (props) => {
     return (
         <div>
             <LanguageSelector content={props.content.languageSelector} close={toggleLanguageSelector} content={props.content.languageSelector} />
-            { props.styling.navbarDisplay &&
-            <nav id="navbar" className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1 ${props.styling.fixed}`} id='navbar'>
+            <nav id="navbar" className={`${classes.navbar} navbar navbar-expand-md navbar-dark mb-4 py-1`} id='navbar'>
                 <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                     <span className='navbar-toggler-icon'></span>
                 </button>
@@ -152,20 +151,12 @@ const Navbar = (props) => {
                     </ul>
                 </div>
             </nav>
-            }
-            { props.styling.socialDisplay &&
-                <div className={classes.socialMedia}>
-                    <a href={props.social.github} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href={props.social.twitter} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
-                    <a href={props.social.linkedin} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href={props.social.facebook} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
-                </div>
-            }
-            { props.styling.scrollUp.setup &&
-                <span className={`${classes.scrollUp} nav-link`} data-link='__next'>
-                    <FontAwesomeIcon icon={ faChevronUp } />
-                </span>
-            }
+            <div className={classes.socialMedia}>
+                <a href={props.social.github} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                <a href={props.social.twitter} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href={props.social.linkedin} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a href={props.social.facebook} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+            </div>
         </div>
     )
 };
