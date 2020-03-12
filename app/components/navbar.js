@@ -42,7 +42,7 @@ const Navbar = (props) => {
     useEffect(() => {
         setupNavbarScrolling();
         setUpNavbarColorWaypoints();
-        if (props.styling.waypoint.setup) {
+        if (props.styling.waypoint.setup && window.screen.width > 770) {
             const offset = props.styling.waypoint.offset ? props.styling.waypoint.offset : 0;
             const navbar = window.document.getElementById('navbar');
 

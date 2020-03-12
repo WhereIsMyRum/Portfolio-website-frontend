@@ -29,8 +29,13 @@ const contactStyles = createUseStyles({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingBottom: '40px'
+        paddingBottom: '60px'
     },
+    '@media (max-width: 1024px)': {
+        contactList: {
+            paddingBottom: '40px'
+        }
+    }
 });
 
 export default contactStyles;
