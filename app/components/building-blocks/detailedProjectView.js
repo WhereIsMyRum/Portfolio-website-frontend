@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import renderHTML from 'react-render-html';
 
-import detailedProjectViewStyles from '../../jss-styles/index/detailedProjectView';
 import Loader from '../loader';
+
+import detailedProjectViewStyles from '../../jss-styles/building-blocks/detailedProjectView';
 
 
 const DetailedProjectView = (props) => {

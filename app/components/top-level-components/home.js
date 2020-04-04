@@ -1,7 +1,8 @@
-import homeStyles from '../../jss-styles/index/home';
 import { useEffect } from 'react';
-import Link from 'next/link';
+
 import { toggleLanguageSelector } from '../../utils/utils';
+
+import homeStyles from '../../jss-styles/top-level-components/home';
 
 
 const Home = (props) => {

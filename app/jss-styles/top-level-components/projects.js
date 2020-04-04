@@ -1,7 +1,16 @@
 import { createUseStyles } from 'react-jss';
 
 
-const projectsDisplayStyles = createUseStyles({
+const projectsStyles = createUseStyles({
+    projects: {
+        width: '100vw',
+        height: 'auto',
+        minHeight: '100vh',
+        backgroundColor: '#eeeeee',
+        zIndex: 20,
+        position: 'relative'
+    },
+
     projectsContainer: {
         display: 'flex',
         flexDirection: 'row',
@@ -12,6 +21,7 @@ const projectsDisplayStyles = createUseStyles({
         },
         flexWrap: 'wrap'
     },
+
     '@media (max-width: 770px)': {
         projectsContainer: {
             padding: {
@@ -21,6 +31,7 @@ const projectsDisplayStyles = createUseStyles({
             }
         }
     },
+
     '@media (max-width: 640px)': {
         projectsContainer: {
             padding: {
@@ -33,4 +44,4 @@ const projectsDisplayStyles = createUseStyles({
     }
 });
 
-export default projectsDisplayStyles;
+export default projectsStyles;

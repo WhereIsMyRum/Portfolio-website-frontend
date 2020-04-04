@@ -1,12 +1,14 @@
-import Layout from '../components/layout';
-import Home from '../components/index/home';
-import About from '../components/index/about';
-import Projects from '../components/index/projects';
-import Contact from '../components/index/contact';
 import fetch from 'isomorphic-unfetch';
 import nextCookies from 'next-cookies';
 import Error from 'next/error';
+
+import Layout from '../components/layout';
 import CopyrightFooter from '../components/copyrightFooter';
+
+import Home from '../components/top-level-components/home';
+import About from '../components/top-level-components/about';
+import Projects from '../components/top-level-components/projects';
+import Contact from '../components/top-level-components/contact';
 
 
 const Index = (props) => {

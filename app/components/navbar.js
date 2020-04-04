@@ -1,13 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import LanguageSelector from './index/languageSelector';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faTwitter, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+import LanguageSelector from './building-blocks/languageSelector';
+
+import { toggleLanguageSelector } from '../utils/utils';
 
 import navbarStyles from '../jss-styles/navbar';
-import { toggleLanguageSelector } from '../utils/utils';
+
 
 const Navbar = (props) => {
     const router = useRouter();

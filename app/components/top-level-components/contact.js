@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 
-import ContactForm from './contactForm';
-import ContactTile from './contactTile';
+import ContactForm from '../building-blocks/contactForm';
+import ContactTile from '../building-blocks/contactTile';
+
 import { fadeOutElement } from  '../../utils/utils';
-import globalStyles from '../../jss-styles/index/global';
-import contactStyles from '../../jss-styles/index/contact'
+
+import globalStyles from '../../jss-styles/global';
+import contactStyles from '../../jss-styles/top-level-components/contact'
 
 
 

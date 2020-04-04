@@ -1,8 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
-import { projectsCardStyles, getRandomCardClass } from '../../jss-styles/index/projectCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import { projectsCardStyles, getRandomCardClass } from '../../jss-styles/building-blocks/projectCard'
 
 
 const ProjectCard = (props) => {

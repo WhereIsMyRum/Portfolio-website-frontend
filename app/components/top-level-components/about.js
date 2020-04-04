@@ -1,5 +1,5 @@
-import globalStyles from '../../jss-styles/index/global';
-import aboutStyles from '../../jss-styles/index/about';
+import globalStyles from '../../jss-styles/global';
+import aboutStyles from '../../jss-styles/top-level-components/about';
 
 
 const About = (props) => {

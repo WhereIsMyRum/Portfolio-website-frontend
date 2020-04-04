@@ -2,8 +2,10 @@ import { useState } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 import Loader from '../loader';
+
 import useInput from '../../hooks/input-hook';
-import contactFormStyles from '../../jss-styles/index/contactForm';
+
+import contactFormStyles from '../../jss-styles/building-blocks/contactForm';
 
 
 

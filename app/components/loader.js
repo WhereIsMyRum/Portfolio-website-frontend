@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import colors from '../jss-styles/colors';
 
 const Loader = (props) => {

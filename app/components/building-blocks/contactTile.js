@@ -1,7 +1,7 @@
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { contactTileStyles } from '../../jss-styles/index/contactTile'
+import { contactTileStyles } from '../../jss-styles/building-blocks/contactTile'
 
 
 const ContactTile = (props) => {

@@ -1,8 +1,11 @@
 import { JssProvider } from 'react-jss';
-import { getColorScheme, getWebsiteRootUrl } from '../utils/utils';
 import Head from 'next/head';
+
 import Navbar from './navbar';
 import Loader from './loader'
+
+import { getColorScheme, getWebsiteRootUrl } from '../utils/utils';
+
 
 const Layout = (props) => {
     const colorSchema = getColorScheme(props.colorScheme);
