@@ -19,16 +19,14 @@
     },
     "projects": {
         "title": "Projekty",
-        "subtitle": "Wkrótce w pełni po polsku",
-        "projectsDisplay": {
-            "projectCard": {
-                "detailsButton": "więcej"
-            },
-            "projectDetails": {
-                "backButton": "Wróć",
-                "githubButton": "Github",
-                "error": "Przepraszam, coś poszło nie tak."
-            }
+        "subtitle": "",
+        "projectCard": {
+            "detailsButton": "więcej"
+        },
+        "projectDetails": {
+            "backButton": "Wróć",
+            "githubButton": "Github",
+            "error": "Przepraszam, coś poszło nie tak."
         }
     },
     "contact": {
