@@ -14,10 +14,7 @@ const Contact = (props) => {
     const globalClasses = globalStyles();
     const classes = contactStyles();
 
-    useEffect(() => {
-        const loader = document.getElementById('loader');
-        fadeOutElement(loader);
-    }, []);
+    
 
     return (<div id="contact" className={`${classes.contact}`}>
         <div className={globalClasses.sectionHeader}>

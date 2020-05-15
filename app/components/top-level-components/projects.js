@@ -18,6 +18,11 @@ const Projects = (props) => {
         setupProjectCardScrolling();
     })
 
+    useEffect(() => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {fadeOutElement(loader)},300);
+    }, []);
+
     const setupProjectCardScrolling = () => {
         const links = document.getElementsByClassName("more");
         for (let link of links) {
