@@ -19,8 +19,8 @@ const Index = (props) => {
 
     return (
         <Layout navbar={layout.navbar} og={layout.og} content={content.layout}>
-            <Home menu={content.layout.navbar} content={content.home}></Home>
-            <About content={content.about}></About>
+            <Home menu={content.layout.navbar} content={content.home}  data={props.home}></Home>
+            <About content={content.about} data={props.about}></About>
             <Projects content={content.projects} props={props.data}></Projects>
             <Contact content={content.contact}></Contact>
             <CopyrightFooter  styling={layout.footer}/>
@@ -38,11 +38,19 @@ Index.getInitialProps = async (ctx) => {
     } else {
         res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
     }
-
+    
+    const supportsWebP = ctx.req.headers.accept.match('image/webp');
     if (res.status === 200) {
         const data = await res.json();
         return {
             'data': data,
+            'home': {
+                bg: supportsWebP ? '/static/images/bg_full.webp' : '/static/images/bg_full.jpg',
+                bgMoving: supportsWebP ? '/static/images/bg_bt_trans.webp' : '/static/images/bg_bt_trans.png'
+            },
+            'about': {
+                img: supportsWebP ? '/static/images/me_bw.webp' : '/static/images/me_bw.jpg'
+            },
             'lang': lang
         };
     }

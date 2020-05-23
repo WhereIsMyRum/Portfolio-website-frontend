@@ -23,7 +23,7 @@ const Home = (props) => {
 
     const classes = homeStyles();
     return (<div id="home">
-        <div className={classes.wrapper}>
+        <div className={classes.wrapper} style={{backgroundImage: `url('${props.data.bg}')`}}>
             <nav id="home-nav"className={classes.navbar}>
                 <div>
                     <span className={'active nav-link'} data-path="/" data-link="home">{props.menu.section1}</span>
@@ -33,7 +33,7 @@ const Home = (props) => {
                     <span onClick={() => toggleLanguageSelector('open')} className={'nav-link'}>{props.menu.lang}</span>
                 </div>
             </nav>
-            <div className={classes.parallaxImg}>
+            <div className={classes.parallaxImg} style={{backgroundImage: `url('${props.data.bgMoving}')`}}>
                 <div className={classes.breakFix}></div>
             </div>
             <div className={classes.introduction}>

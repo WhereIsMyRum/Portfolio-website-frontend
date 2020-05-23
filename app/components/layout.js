@@ -27,7 +27,7 @@ const Layout = (props) => {
                 <meta property="og:description" content={props.og.description} /> 
                 <meta property="og:image" content={getWebsiteRootUrl() + props.og.image} />
                 <link rel="stylesheet" href="/static/styles/styles.css"></link>
-                <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"></link>
+                <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css" media="print" onload="this.media='all'"></link>
                 <link rel="shortcut icon" type="image/png" href="/static/images/Logo_light.png" />
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
                 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossOrigin="anonymous"></script>

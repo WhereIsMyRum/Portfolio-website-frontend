@@ -7,7 +7,6 @@ const homeStyles = createUseStyles({
         width: '100vw',
         height: '100vh',
         background: {
-            image: 'url("/static/images/bg_full.jpg")',
             color: '#000',
             position: 'center 0',
             repeat: 'no-repeat',
@@ -61,7 +60,6 @@ const homeStyles = createUseStyles({
         position: 'absolute',
         zIndex: 2,
         background: {
-            image: 'url("/static/images/bg_bt_trans.png")',
             position: 'center 0',
             repeat: 'no-repeat',
             size: 'cover',
