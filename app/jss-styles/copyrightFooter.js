@@ -27,7 +27,7 @@ const copyrightFooterStyles = createUseStyles({
     },
 
     name: {
-        color: '#777',
+        color: '#999',
     }
 });
 

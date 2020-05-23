@@ -20,7 +20,7 @@ const contactTileStyles = createUseStyles({
         },
         '& p': {
             marginBottom: 0,
-            color: '#777'
+            color: '#999'
         },
         '&:hover': {
             cursor: 'pointer',
