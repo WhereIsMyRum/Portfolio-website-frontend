@@ -71,12 +71,12 @@ const ContactForm = (props) => {
             {failed && <div className={`${classes.message} ${classes.error}`}>{props.content.errorMessage}</div>}
             {submitted && !failed && !success && <div className={classes.message}><Loader /></div>}
             {!success && !submitted &&
-                <form onSubmit={handleSubmit}>
-                    <input placeholder={props.content.namePlaceholder} name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
-                    <input placeholder={props.content.emailPlaceholder} name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
-                    <input placeholder={props.content.subjectPlaceholder} name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>
-                    <textarea placeholder={props.content.textPlaceholder} name="messageaighjk" required rows="12" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
-                    <input type="submit" value={props.content.submitButton} className={`${classes.generalInput} ${classes.submit}`} />
+                <form aria-label="contact form" onSubmit={handleSubmit}>
+                    <input aria-label={props.content.namePlaceholder} placeholder={props.content.namePlaceholder} name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
+                    <input aria-label={props.content.emailPlaceholder} placeholder={props.content.emailPlaceholder} name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
+                    <input aria-label={props.content.subjectPlaceholder} placeholder={props.content.subjectPlaceholder} name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>
+                    <textarea aria-label={props.content.textPlaceholder} placeholder={props.content.textPlaceholder} name="messageaighjk" required rows="12" cols="50" {...bindText} className={`${classes.generalInput} ${classes.textField}`}></textarea>
+                    <input aria-label={props.content.submitButton} type="submit" value={props.content.submitButton} className={`${classes.generalInput} ${classes.submit}`} />
 
                     <input placeholder="Name" name="name" {...honeyBindName} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
                     <input placeholder="Email" name="email" {...honeyBindEmail} className={`${classes.honey}`} tabIndex="-1" autoComplete="off"></input>
