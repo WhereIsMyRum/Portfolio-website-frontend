@@ -71,7 +71,7 @@ const ContactForm = (props) => {
             {failed && <div className={`${classes.message} ${classes.error}`}>{props.content.errorMessage}</div>}
             {submitted && !failed && !success && <div className={classes.message}><Loader /></div>}
             {!success && !submitted &&
-                <form onSubmit={handleSubmit} >
+                <form onSubmit={handleSubmit}>
                     <input placeholder={props.content.namePlaceholder} name="nameaighjk" required type="text" {...bindName} className={`${classes.generalInput} ${classes.name}`}></input>
                     <input placeholder={props.content.emailPlaceholder} name="emailaighjk" required type="email" {...bindEmail} className={`${classes.generalInput} ${classes.email}`}></input>
                     <input placeholder={props.content.subjectPlaceholder} name="subjectaighjk" required type="text" {...bindSubject} className={`${classes.generalInput} ${classes.subject}`}></input>

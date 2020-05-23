@@ -151,10 +151,10 @@ const Navbar = (props) => {
                 </div>
             </nav>
             <div className={classes.socialMedia}>
-                <a href={props.social.github} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                <a href={props.social.twitter} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href={props.social.linkedin} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href={props.social.facebook} rel="nofollow" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+                <a href={props.social.github} aria-label="Link to my github account" rel="nofollow noreferrer" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                <a href={props.social.twitter} aria-label="Link to my twitter account" rel="nofollow noreferrer" target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href={props.social.linkedin} aria-label="Link to my linkedin page" rel="nofollow noreferrer" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a href={props.social.facebook} aria-label="Link to my facebook page" rel="nofollow noreferrer" target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
             </div>
         </div>
     )
