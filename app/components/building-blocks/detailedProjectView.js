@@ -46,7 +46,7 @@ const DetailedProjectView = (props) => {
             {isLoading && <Loader />}
             {code500 && <div className={classes.errorMessage}>
                             <p>{props.content.error}</p>
-                            <div className={`${classes.backButton} ${classes.errorBackButton}`} onClick={() => props.setDetailID('')}>Back</div>
+                            <div className={`${classes.backButton} ${classes.errorBackButton}`} onClick={() => props.setDetailID('')}>{props.content.backButton}</div>
                         </div>}
             {!isLoading && !code500 &&sections.length > 0 && technologies.length > 0 &&
                 <div className={`${props.style}-wrapper`}>
