@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1 class="title">Portfolio Frontend</h1>
+<h1 class="title">Portfolio Website Frontend</h1>
 <h3 class="why">Powód</h3>
 <p class="why">Strona portfolio nie mogłaby za bardzo istnieć bez odpowiedniego frontendu, zatem odpowiedź na to pytanie jest raczej oczywista.</p>
 <h3 class="what">Cel</h3>

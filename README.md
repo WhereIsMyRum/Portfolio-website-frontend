@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1 class="title">Portfolio Frontend</h1>
+<h1 class="title">Portfolio Website Frontend</h1>
 <h3 class="why">Why</h3>
 <p class="why">Well the answer to that question is pretty obvious. What is the point of having a portfolio website that does not have a frontend?</p>
 <h3 class="what">What</h3>
