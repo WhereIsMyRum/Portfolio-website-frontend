@@ -26,7 +26,7 @@
         "projectDetails": {
             "backButton": "Back",
             "githubButton": "Go to Github",
-            "error":"Something wait wrong. Sorry."
+            "error":"Something went wrong. Sorry."
         }
     },
     "contact": {
