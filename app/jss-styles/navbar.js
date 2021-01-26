@@ -45,7 +45,7 @@ const navbarStyles = createUseStyles({
         justifyContent: 'space-between',
         '& svg': {
             height: '40px',
-            width: '40px',
+            width: '40px !important',
             color: colors.mint,
             transition: '.3s linear',
             '&:hover': {

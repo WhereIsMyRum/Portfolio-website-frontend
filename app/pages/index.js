@@ -36,7 +36,7 @@ Index.getInitialProps = async (ctx) => {
     if (process.browser) {
         res = await fetch('/api/projects', {headers: {cookie: `lang=${lang}`}});
     } else {
-        res = await fetch('http://backend:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
+        res = await fetch('http://website-api:8080/api/projects',  {headers: {cookie: `lang=${lang}`}});
     }
     
     const supportsWebP = ctx.req.headers.accept.match('image/webp');
