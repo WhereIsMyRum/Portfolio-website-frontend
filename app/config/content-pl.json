@@ -1,96 +1,96 @@
 {
-    "home": {
-        "title": "",
-        "intro": {
-            "greeting": "Cześć",
-            "introduction": "Mam na imię",
-            "nameVisible": "Piotr",
-            "nameHidden": "Połcik",
-            "welcome": "a to moje portfolio."
-        }
-    },
-    "about": {
-        "title": "O mnie",
-        "text": {
-            "paragraph1": "Mam na imię Piotr, i jestem studentem Informatyki drugiego stopnia na Duńskim Uniwersytecie Technicznym, absolwent Akademii Górniczo-Hutniczej w Krakowie.",
-            "paragraph2": "Do moich głównych profesjonalnych zainteresowań należą Backend developement, DevOps, CI/CD oraz administracja w usługach chmurowych.",
-            "paragraph3": "Jestem otwarty na wszelkie propozycje współpracy, ponieważ z doświadczenia wiem, że najlepiej uczę się poprzez praktykę."
-        }
-    },
-    "projects": {
-        "title": "Projekty",
-        "subtitle": "",
-        "projectCard": {
-            "detailsButton": "więcej"
-        },
-        "projectDetails": {
-            "backButton": "Wróć",
-            "githubButton": "Github",
-            "error": "Przepraszam, coś poszło nie tak."
-        }
-    },
-    "contact": {
-        "title": "Kontakt",
-        "sectionDividerText": "lub jeżeli wolisz",
-        "contactForm": {
-            "namePlaceholder": "Imię",
-            "subjectPlaceholder": "Temat",
-            "emailPlaceholder": "Email",
-            "textPlaceholder": "Treść",
-            "errorMessage": "Coś poszło nie tak. Spróbuj ponownie później lub użyj poniższych opcji.",
-            "thankYouMessage": "Dziękuję za wysłanie wiadomości!",
-            "submitButton": "Wyślij"
-        },
-        "contactTiles": {
-            "tiles": [
-                {
-                    "title": "Email",
-                    "icon": "faEnvelope",
-                    "text": "polcik.piotr@gmail.com",
-                    "onClickAction": "() => { window.location.href = 'mailto:polcik.piotr@gmail.com' }"
-                },
-                {
-                    "title": "Zadzwoń",
-                    "icon": "faPhone",
-                    "text": "+45 52 64 81 92",
-                    "onClickAction": "() => { window.location.href = 'tel:+45552648192' }"
-                }
-            ]
-        },
-        "copyright": {
-            "text": "Piotr Połcik",
-            "date": "Styczeń 2019",
-            "place": ""
-        }
-    },
-    "layout": {
-        "navbar": {
-            "section1": "Home",
-            "section2": "O mnie",
-            "section3": "Projekty",
-            "section4": "Kontakt",
-            "section5": "Blog",
-            "lang": "Język",
-            "languageSelector": {
-                "available": [
-                    {
-                        "en": "English"
-                    },
-                    {
-                        "pl": "Polski"
-                    }
-                ]
-            }
-        },
-        "meta": {
-            "title": "Piotr Połcik | Develop the web and have fun!",
-            "description": "My name is Piotr, and I am a Web developer. Visit my website!"
-        },
-        "social": {
-            "github": "https://github.com/WhereIsMyRum",
-            "twitter": "https://twitter.com/whereismywhisky",
-            "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
-            "facebook": "https://www.facebook.com/PiotrPolcik"
-        }
+  "home": {
+    "title": "",
+    "intro": {
+      "greeting": "Cześć",
+      "introduction": "Mam na imię",
+      "nameVisible": "Piotr",
+      "nameHidden": "Połcik",
+      "welcome": "a to moje portfolio."
     }
+  },
+  "about": {
+    "title": "O mnie",
+    "text": {
+      "paragraph1": "Mam na imię Piotr, i jestem programistą pracującym w branży IT od 2018 roku. Posiadam dyplom magistra z informatyki, który zdobyłem na Duńskim Uniwersytecie Technicznym w 2021 roku.",
+      "paragraph2": "Do moich głównych zawodowych zainteresowań należą back-end developement, projektowanie architektury oprogramowania, zarządzanie infrastrukturą aplikacji, DevOps i CI/CD.",
+      "paragraph3": "Jestem otwarty na wszelkie propozycje współpracy, dlatego serdecznie zapraszam do kontaktu."
+    }
+  },
+  "projects": {
+    "title": "Projekty",
+    "subtitle": "",
+    "projectCard": {
+      "detailsButton": "więcej"
+    },
+    "projectDetails": {
+      "backButton": "Wróć",
+      "githubButton": "Github",
+      "error": "Przepraszam, coś poszło nie tak."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "sectionDividerText": "lub jeżeli wolisz",
+    "contactForm": {
+      "namePlaceholder": "Imię",
+      "subjectPlaceholder": "Temat",
+      "emailPlaceholder": "Email",
+      "textPlaceholder": "Treść",
+      "errorMessage": "Coś poszło nie tak. Spróbuj ponownie później lub użyj poniższych opcji.",
+      "thankYouMessage": "Dziękuję za wysłanie wiadomości!",
+      "submitButton": "Wyślij"
+    },
+    "contactTiles": {
+      "tiles": [
+        {
+          "title": "Email",
+          "icon": "faEnvelope",
+          "text": "polcik.piotr@gmail.com",
+          "onClickAction": "() => { window.location.href = 'mailto:polcik.piotr@gmail.com' }"
+        },
+        {
+          "title": "Zadzwoń",
+          "icon": "faPhone",
+          "text": "+45 52 64 81 92",
+          "onClickAction": "() => { window.location.href = 'tel:+45552648192' }"
+        }
+      ]
+    },
+    "copyright": {
+      "text": "Piotr Połcik",
+      "date": "Styczeń 2019",
+      "place": ""
+    }
+  },
+  "layout": {
+    "navbar": {
+      "section1": "Home",
+      "section2": "O mnie",
+      "section3": "Projekty",
+      "section4": "Kontakt",
+      "section5": "Blog",
+      "lang": "Język",
+      "languageSelector": {
+        "available": [
+          {
+            "en": "English"
+          },
+          {
+            "pl": "Polski"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "title": "Piotr Połcik | Develop the web and have fun!",
+      "description": "My name is Piotr, and I am a back-end developer. Visit my website!"
+    },
+    "social": {
+      "github": "https://github.com/WhereIsMyRum",
+      "twitter": "https://twitter.com/whereismywhisky",
+      "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
+      "facebook": "https://www.facebook.com/PiotrPolcik"
+    }
+  }
 }

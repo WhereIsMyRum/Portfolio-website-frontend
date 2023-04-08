@@ -1,96 +1,96 @@
 {
-    "home": {
-        "title": "",
-        "intro": {
-            "greeting": "Hello",
-            "introduction": "My name is",
-            "nameVisible": "Piotr",
-            "nameHidden": "Połcik",
-            "welcome": "welcome to my developer portfolio."
-        }
-    },
-    "about": {
-        "title": "About",
-        "text": {
-            "paragraph1": "I'm Piotr, Master of Computer Science student at Technical University of Denmark and AGH University of Science and Technology in Cracow graduate, where I got my BSc of Engineering diploma.",
-            "paragraph2": "My main focus is Backend developement, with some interest in DevOps, CI/CD and cloud services administration.",
-            "paragraph3": "I'm open to all cooperation proposals, as I love to learn by doing."
-        }
-    },
-    "projects": {
-        "title": "Projects",
-        "subtitle": "",
-        "projectCard": {
-            "detailsButton": "more"
-        },
-        "projectDetails": {
-            "backButton": "Back",
-            "githubButton": "Go to Github",
-            "error":"Something went wrong. Sorry."
-        }
-    },
-    "contact": {
-        "title": "Contact",
-        "sectionDividerText": "or if you prefer",
-        "contactForm": {
-            "namePlaceholder": "Name",
-            "subjectPlaceholder": "Subject",
-            "emailPlaceholder": "Email",
-            "textPlaceholder": "Text",
-            "errorMessage": "Something went wrong. Please try again later.",
-            "thankYouMessage": "Thank you for sending a message!",
-            "submitButton": "Submit"
-        },
-        "contactTiles": {
-            "tiles": [
-                {
-                    "title": "Email",
-                    "icon": "faEnvelope",
-                    "text": "polcik.piotr@gmail.com",
-                    "onClickAction": "() => { window.location.href = 'mailto:polcik.piotr@gmail.com' }"
-                },
-                {
-                    "title": "Call",
-                    "icon": "faPhone",
-                    "text": "+45 52 64 81 92",
-                    "onClickAction": "() => { window.location.href = 'tel:+45552648192' }"
-                }
-            ]
-        },
-        "copyright": {
-            "text": "Piotr Połcik",
-            "date": "January 2019",
-            "place": ""
-        }
-    },
-    "layout": {
-        "navbar": {
-            "section1": "Home",
-            "section2": "About",
-            "section3": "Projects",
-            "section4": "Contact",
-            "section5": "Blog",
-            "lang": "Language",
-            "languageSelector": {
-                "available": [
-                    {
-                        "en": "English"
-                    },
-                    {
-                        "pl": "Polski"
-                    }
-                ]
-            }
-        },
-        "meta": {
-            "title": "Piotr Połcik | Develop the web and have fun!",
-            "description": "My name is Piotr, and I am a Web developer. Visit my website!"
-        },
-        "social": {
-            "github": "https://github.com/WhereIsMyRum",
-            "twitter": "https://twitter.com/whereismywhisky",
-            "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
-            "facebook": "https://www.facebook.com/PiotrPolcik"
-        }
+  "home": {
+    "title": "",
+    "intro": {
+      "greeting": "Hello",
+      "introduction": "My name is",
+      "nameVisible": "Piotr",
+      "nameHidden": "Połcik",
+      "welcome": "welcome to my developer portfolio."
     }
+  },
+  "about": {
+    "title": "About",
+    "text": {
+      "paragraph1": "I'm Piotr, back-end developer working in IT since 2018. I have a masters degree in Computer Science and Engineering from Technical University of Denmark (graduated Jan 2021).",
+      "paragraph2": "My main focus is back-end development, designing application architecture, infrastructure management, DevOps and CI/CD.",
+      "paragraph3": "I'm open to all cooperation proposals, so I encourage you to reach out!"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "",
+    "projectCard": {
+      "detailsButton": "more"
+    },
+    "projectDetails": {
+      "backButton": "Back",
+      "githubButton": "Go to Github",
+      "error": "Something went wrong. Sorry."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "sectionDividerText": "or if you prefer",
+    "contactForm": {
+      "namePlaceholder": "Name",
+      "subjectPlaceholder": "Subject",
+      "emailPlaceholder": "Email",
+      "textPlaceholder": "Text",
+      "errorMessage": "Something went wrong. Please try again later.",
+      "thankYouMessage": "Thank you for sending a message!",
+      "submitButton": "Submit"
+    },
+    "contactTiles": {
+      "tiles": [
+        {
+          "title": "Email",
+          "icon": "faEnvelope",
+          "text": "polcik.piotr@gmail.com",
+          "onClickAction": "() => { window.location.href = 'mailto:polcik.piotr@gmail.com' }"
+        },
+        {
+          "title": "Call",
+          "icon": "faPhone",
+          "text": "+45 52 64 81 92",
+          "onClickAction": "() => { window.location.href = 'tel:+45552648192' }"
+        }
+      ]
+    },
+    "copyright": {
+      "text": "Piotr Połcik",
+      "date": "January 2019",
+      "place": ""
+    }
+  },
+  "layout": {
+    "navbar": {
+      "section1": "Home",
+      "section2": "About",
+      "section3": "Projects",
+      "section4": "Contact",
+      "section5": "Blog",
+      "lang": "Language",
+      "languageSelector": {
+        "available": [
+          {
+            "en": "English"
+          },
+          {
+            "pl": "Polski"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "title": "Piotr Połcik | Develop the web and have fun!",
+      "description": "My name is Piotr, and I am a back-end developer. Visit my website!"
+    },
+    "social": {
+      "github": "https://github.com/WhereIsMyRum",
+      "twitter": "https://twitter.com/whereismywhisky",
+      "linkedin": "https://www.linkedin.com/in/piotr-polcik/",
+      "facebook": "https://www.facebook.com/PiotrPolcik"
+    }
+  }
 }

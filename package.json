@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next ./app",
     "build": "next build ./app",
-    "start": "next start ./app"
+    "start": "next start ./app",
+    "export": "next build ./app && next export ./app"
   },
   "keywords": [],
   "author": "",
