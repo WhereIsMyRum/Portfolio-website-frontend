@@ -10,7 +10,6 @@ const Home = (props) => {
     new Waypoint({
       element: window.document.getElementById("about"),
       handler: (direction) => {
-        console.log("thing");
         if (direction === "down") {
           homeNav.style.zIndex = 0;
         } else {
